@@ -1,0 +1,16 @@
+admin -> 
+	Update content website, 
+	User management, 
+	Modul Master, 	
+	Sama kaya pelapor CRUD
+pelapor -> liat sma tambah laporan, edit + tambah
+pimpinan -> dashboard monitoring
+superuser -> semua akses
+
+content -> carousel
+
+register harus email ap
+
+metode web aplication vulnerability -> minta dhikri
+
+

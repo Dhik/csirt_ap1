@@ -1,0 +1,124 @@
+insiden type tambahin other
+tambahin view bukti img
+png atau jpg bisa backdoor -----
+beranda kiri kanan samain
+tanem backdoor digambar ----
+
+1. skema database
+2. login
+3. pelaporan
+4. cms
+
+deadline jumat 24 
+
+
+edit content 
+
+
+login pake jwt sesuai
+akses pelapor admin pimpinan dan super clear
+user management admin bisa rubah, menu activation setelah login, 
+hardening
+
+email blm 
+---------------------------
+Path login apa? -> user 1
+Image resolusinya harus dibuat default -> user 2
+footer -> user 3
+Text artikel dan berita (desain) ->admin 4
+Coba liat form isiannya waktu tambah konten, input insiden -> admin 5
+Pelapor bisa ubah status? bukannya admin aja ya -> admin 6
+
+
+chart 3
+Gabisa diblok -> user
+
+gambar original
+gaboleh diblock
+
+
+usermangement di superuser fokus disini -> admin 7
+pelapor, pimpinan, admin,superuser change pass -> admin 8
+batasan user jelasin -> admin 9
+pimpinan asc desc -> admin 
+superuser bisa edit semua pass -> admin
+
+logo
+semua aset/warna edit ulang
+
+
+----------------------------------------------------------
+ admin -> tambah foto edit profil
+
+edit profile 
+
+admin
+berita -> add, edit, delete
+galery ->add,delete,edit
+Event -> add, delete, edit
+carousel ->add,delete,edit
+report -> update,delete
+
+pelapor -> add, delete
+
+pimpinan -> dash, report
+
+super -> usermanagement
+
+
+------------------------------------------------------------
+pelapor
+pelapor bisa update keterangan, hapus selama pending -> validasi ilangin update dan hapus
+
+
+pimpinan
+comparison -> type 
+sorting tgl status
+pending jam
+pending 
+in progress
+close
+download table pimpinan -> minor
+
+edit profile
+gambar -> bisa update
+
+superuser
+password ga perlu muncul
+old password
+new password
+confirm new password
+show & hide password
+superuser bisa langsung ganti ada confirm password
+password 8 minimal -> validasi capital, angka, karakter spesial
+superuser ga bisa edit dirinya di table 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

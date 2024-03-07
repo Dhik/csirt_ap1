@@ -1,0 +1,2648 @@
+body {
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    font-family: 'Inter', sans-serif !important; 
+    max-width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+pre{    
+    font-family: 'Inter', sans-serif !important; 
+}
+.navbarBG {
+    background: rgba(0, 114, 185, 0.80)!important;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    box-sizing: border-box;
+    z-index: 1000;
+}
+.nav-item h6{
+    color:white;
+    font-size: 14px;
+
+}
+.navbar-collapse{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(229, 239, 254, 0.8);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+
+.dropdown-content a {
+    color: #0D2E5B;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+}
+
+.dropdown-content a:hover {
+    background-color: #66B82E;
+    color: #fff;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .nav-link {
+    color: #66B82E;
+}
+
+
+.navbar-logo {
+    width: 30%; 
+}
+
+.navbar-logo img {
+    width: 100%
+}
+.navbar-nav { 
+    display: flex;
+    margin: 0;
+    padding: 0;
+    width: 90% !important;
+    justify-content: space-around;
+}
+.nav-item {
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+}
+.nav-link {
+    font-size: 15px;
+    color: #0D2E5B;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+.nav-link p{
+    
+    margin: 0;
+    padding: 0;
+}
+.dropdown-content{
+    text-align: center;
+}
+
+.navbar-nav .fitur p {
+    margin-bottom: 0;
+}
+.fitur {
+    color: #FFF !important;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-left: 20px;
+}
+.bg{
+    background-color: white;
+    padding-bottom: 70px;
+    width:100% ;
+    box-sizing: border-box;
+}
+.main-wrapper{
+    width: 100%;
+}
+.beranda{
+    width: 100% !important;
+    margin: 0;
+    padding: 0;
+}
+.overlay-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.carousel-control-prev,
+.carousel-control-next {
+    color: #66B82E !important;
+    font-size: 30px;
+    margin: -60px;
+}
+.text-container {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    opacity: 70%;
+    width: 100%;
+    height: 35%;
+    justify-content: center;
+}
+.containerAJudul{
+    background-color: rgba(102, 184, 46, 0.75); 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    bottom: 8px;
+    padding: 16px;
+}
+.carousel-item{
+    top: -8px;
+}
+.containerAJudul h4{
+    color: white;
+    margin-block:auto ;
+    margin-left: 60px;
+}
+
+.containerContent{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0;
+}
+hr{
+    margin: 0;
+}
+.main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    box-sizing: border-box;
+    width: 100%;
+}
+.kiri{
+    /* margin-top: 30px; */
+    width: 65%; 
+    word-wrap: break-word;
+}
+.kanan{
+    background-color: rgba(234, 241, 255, 0.4);
+    width: 25%;
+    margin-top: 25px;
+}
+.kanan img{
+    width: 100%;
+    height: 120px; 
+    object-fit: cover; 
+    margin-bottom: 10px;
+}
+.tgl{
+    color: #66B82E;
+    margin-block: 10px;
+}
+.beritaKiri{
+    margin-bottom:80px;
+}
+.KontenKiriDesk{
+    font-size: 16px;
+    margin-bottom: 7px
+}
+.dateKiriDesk{
+    margin: 0;
+}
+.judulKiriDesk{
+    margin-top: 7px;
+    font-size: 27px
+}
+.dateDeskKanan{
+    margin: 0;
+}
+.kontenDeskKanan{
+    margin-bottom: 10px;
+}
+.selengkap{
+    color: #0072B9;
+}
+.contentBerita{
+    padding: 15px;
+    text-align: center;
+}
+.selengkapKanan{
+    color: #0072B9;
+}
+.lihatSemua{
+    background-color: #E5EFFE;
+    color: #0072B9;
+    padding: 5px;
+    text-align: center;
+    width: 100%;
+}
+.lihatSemuaSatu{
+    background-color: #E5EFFE;
+    color: #0072B9;    
+    margin-top: 30px;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+}
+.carousel-inner-galery {
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    width: 90%;
+    margin: auto; 
+}
+
+.carousel-item-galery {
+    max-height: 160px;
+    width: 22%;
+    box-sizing: border-box;
+    position: relative;
+    transition: transform 0.5s ease-in-out;
+    flex: 0 0 auto;
+    
+}
+
+.carousel-item-galery img {
+    object-fit: cover;
+    max-height: 100%; /* Sesuaikan agar gambar tidak terpotong dan tetap berada di dalam item */
+    max-width: 100%;
+}
+
+.bgGalery {
+    background-color: rgba(0, 0, 0, 0.75);
+    padding: 10px;
+    text-align: justify;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.carousel-item-galery:hover .bgGalery {
+    opacity: 1;
+}
+
+.bgGalery p {
+    color: white;
+}
+.carousel-item img{
+    max-height: 500px !important;
+    object-fit: cover;
+    padding: 0;
+}
+.overlay-text h1{
+    font-size: 30px !important;
+    margin-block: 0;
+    padding-block: 0;
+    margin-left: 50px;
+}
+.overlay-text p{
+    font-size: 25px !important;
+    margin-block: 0;
+    padding-block: 0;
+    margin-left: 50px;
+}
+.carousel-control-prev-galery,
+.carousel-control-next-galery {
+    position: absolute;
+    display: flex;
+    z-index: 1;
+    margin: 30px !important;
+    font-size: 30px;
+    background-color: transparent;
+    color: #66B82E !important;
+    border: none;
+}
+
+.carousel-control-prev-galery {
+    left: 0;
+}
+
+.carousel-control-next-galery {
+    right: 0;
+}
+
+
+
+.konten{
+    display: flex;
+    flex-direction: row;
+}
+
+.green-box-list h4 {
+    margin-bottom: 10px;
+}
+.green-box-list ul {
+    list-style-type: none; 
+    padding: 0;
+}
+
+.green-box-list li {
+    position: relative;
+    padding-left: 40px; 
+    margin-bottom: 5px;
+}
+.green-box-list li::before {
+    content: "\25A0"; 
+    color: #66B82E; 
+    font-size: 20px; 
+    position: absolute;
+    left: 0;
+    margin-right: 5px; 
+}
+.layanan{
+    margin-top: 30px;
+    margin-inline:0 ;
+    padding: 0;
+}
+
+.layanan li{
+    padding: 0;
+    margin: 0;
+}
+.alamat{
+    padding-bottom: 20px;
+}
+
+.galery-head{
+    position: relative; 
+    margin: 0;
+    padding: 0; 
+    margin-top: 100px;
+    margin-bottom: 40px;
+}
+.footer {
+    background: linear-gradient(180deg, #015EC5 0%, #002E6E 100%);
+}
+.lowerFooter{
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: white;
+    display: flex;
+
+}
+.highFooter {
+    display: flex;
+    justify-content: space-between;
+    padding-block: 30px;
+    padding-left: 100px;
+    color: white;
+}
+.satu, .dua{
+    padding-top: 50px;
+}
+.tiga{
+    display: flex;
+    border-left: 1px solid #fff; 
+    justify-content: center;
+    flex-direction: column;
+    width: 28%;
+    padding-left: 50px;
+    padding-bottom: 30px;
+}
+.tiga img{
+    width: 70%;
+}
+.empat {
+    width: 30%;
+}
+.satu h6, .dua h6{
+    color: white;
+    margin-bottom: 20px;
+}
+
+.satu a, .dua a{
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.tiga h6{
+    margin-top: 30px;
+    color: white;
+}
+
+.social {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.social a {
+    padding-right: 7px;
+    font-size: 18px; 
+    color: white;
+}
+.empat{
+    display: flex; 
+    justify-content: center;
+    flex-direction: column;
+}
+
+.contactFoot{
+    display: flex;
+}
+.contactFoot p{
+    padding: 10px;
+    width: 90%;
+}
+.infoFoot{
+    display: flex;
+}
+.infoFoot p{
+    padding: 10px;
+    width: 90%;
+}
+
+.breadTop{
+    padding-top: 130px; 
+    margin-bottom: 0;
+}
+.aduanSiber{
+    margin-top: 20px;
+}
+.aduanSiber img{
+    width: 30%;
+}
+.panduan p{
+    margin: 0;
+    padding: 0;
+}
+.event p{
+    margin: 0;
+    padding: 0;
+}
+.hubkiri iframe {
+    width: 100%; 
+    height: 400px; 
+    border: 0; 
+}
+.hubKanan{
+    padding: 50px;
+}
+.hubKanan img{
+    margin: 0 auto 50px; 
+    display: block;
+}
+.profilNew img{
+    margin: auto;
+    width: 100%;
+    margin-block: 15px !important;
+}
+.profilNew .penjelasanProfil{
+    box-sizing: border-box;
+    padding: 40px;
+    color: rgba(0, 0, 0, 0.8);
+    margin: 0;
+}
+.profilLayanan{
+    box-sizing: border-box;
+    padding: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.profilLayanan h6{
+    font-size: 20px;
+}
+.visiNew{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.visiNew img{
+    margin-top: 30px !important;
+    object-fit: cover;
+    width: 100%;
+    min-height: 350px !important;
+}
+.visiNew h6{
+    font-size: 20px;
+
+}
+.visiNew p{
+    font-size: 16px;
+}
+.visiIsi{
+    padding: 40px !important;
+    margin-bottom: 10px;
+}
+.misiIsi{
+    padding: 40px !important;
+    margin-bottom: 10px;
+}
+.visiMisiCrumb{
+    font-size: 16px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.headingVisiMisi{
+    margin-top: 10px;
+    font-size: 22px !important;
+}
+.aduanCrumb{
+    font-size: 16px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.headingAduan{
+    margin-top: 10px !important;
+    font-size: 24px !important;
+}
+.aduanSiber{
+    margin-top: 10px !important;
+    
+}
+.aduanSiber h6{
+    font-size: 22px !important;
+    margin: 0 !important;
+    margin-left: 5px !important;
+
+}
+.aduanSiber ol{             
+    margin: 0 !important;
+    padding: 0 !important;
+    margin-top: 5px !important;
+    margin-bottom: 15px !important;
+}
+.aduanSiber li{
+    font-size: 20px !important;  
+    margin-left: 30px !important; 
+    margin-top: 7px !important;
+}
+.aduanSiber p{
+    font-size: 18px !important;
+    margin: 0 !important;
+    margin-bottom: 7px;
+}
+.imgAduan{
+    display: flex; 
+    justify-content: center;
+    align-content: center; 
+    margin-top: 20px !important;
+}
+.imgAduan img{
+    width: 50%;
+    margin-top: 10px !important;
+}
+.rfc{
+    margin-top: 130px !important;
+    padding-top: 0 !important;
+}
+.rfc h3{
+    font-size: 24px !important;
+}
+.rfc h4{
+    font-size: 23px !important;
+    margin-top: 12px !important;
+}
+.rfc h5{
+    font-size: 22px !important;
+    margin-left: 20px !important;
+    margin-top: 10px !important;
+}
+.rfc h6{
+    font-size: 21px !important;
+    margin-left: 40px !important;
+    margin-top: 10px !important;
+}
+.rfc p{
+    font-size: 18px !important;
+    margin-left: 20px !important;
+
+}
+.rfc pre {
+    font-size: 18px !important;
+}
+.rfc .second{
+    margin-left: 40px !important;
+
+}
+.rfc .third{
+    margin-left: 50px !important;
+
+}
+.panduan h6{
+    font-size: 22px !important;
+    margin: 0 !important;
+    margin-left: 5px !important;
+    margin-top: 20px !important;
+}
+.panduan p{
+    font-size: 18px !important;
+}
+.panduan td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.filename {
+    flex-grow: 1; 
+    margin: 0; 
+}
+
+span[id^="file_size_"] {
+    width: 100px; 
+    text-align: right; 
+}
+.eventStyle {
+    margin-top: 130px !important;
+}
+.eventStyle h3{
+    font-size: 24px !important;
+}
+.eventStyle h5{
+    font-size: 22px !important;
+}
+.eventStyle p{
+    font-size: 18px !important;
+    margin: 0 !important;
+}
+.eventStyle .table {
+    text-align: center; 
+    margin-top: 30px !important;
+}
+
+.eventStyle .table th,
+.eventStyle .table td {
+    vertical-align: middle;
+    padding: 25px;
+}
+.eventStyle td {
+    padding-inline: 0 !important;
+}
+.eventStyle .table th{
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.hubungiKami{
+    margin-top: 130px !important;
+}
+.hubungiKami h3 {
+    font-size: 24px !important;
+}
+.hubungiKami p {
+    font-size: 18px !important;
+}
+.hubungiKami img{
+    width: 100% !important;
+}
+.hubungiKami .hubkiri{
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.hubungiKami .alamat {
+    margin-bottom: 15px !important; 
+    padding: 0 !important;
+}
+.hubungiKami .alamat i{
+    margin: auto; 
+    font-size: 25px; 
+    padding-right: 15px;
+}
+.hubungiKami img {
+    margin-bottom: 15px !important;
+}
+.hubungiKami .kontak{
+    margin-bottom: 15px !important;
+    padding: 0 !important;
+}
+@media only screen and (min-width: 1002px) {
+    .main-tab{
+        display: none;
+    }
+    .galeri-tab{
+        display: none;
+    }
+    .footerTab{
+        display: none;
+    }
+    .hubungiKamiMobile{
+        display: none;
+    }
+}
+@media only screen and (max-width: 500px) {
+    .dropdown-content a {
+        font-size: 8px !important;
+        color: #0D2E5B;
+        display: block;
+        text-align: center;
+    }
+    .navbar-nav p{
+        font-size: 8px !important;
+    }
+    .navbar{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .navbar-logo {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .navbar-logo img {
+        height: 30px !important;
+        width: 213px !important;
+        margin: 0;
+        padding: 0;
+        left: 0;
+    }
+    .navbar-nav .fitur p {
+        margin: 5px !important;
+        font-size: 8px !important;
+    }
+    .nav-item {
+        text-align: center;
+    }
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-content {
+        display: none;
+        background-color: rgba(229, 239, 254, 0.8);
+        position: relative !important;
+        margin: auto;
+        width: 100%;
+    }
+
+    .dropdown-content a {
+        
+        font-size: 7px !important;
+        color: #0D2E5B;
+        display: block;
+        text-align: center;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #66B82E;
+        color: #fff;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    .dropdown:hover .nav-link {
+        color: #66B82E;
+    }
+    .TogglerIcon {
+        border-radius: 2px;
+        font-size: 12px;
+    }
+    .carousel-inner {
+        margin-top: 20px;
+    }
+    .carousel-item img{
+        max-height: 110px !important;
+        object-fit: cover;
+        padding: 0;
+    }
+    .overlay-text h1{
+        font-size: 10px !important;
+        margin-block: 0;
+        padding-block: 0;
+        margin-left: 20px;
+    }
+    .overlay-text p{
+        font-size: 7px !important;
+        margin-block: 0;
+        padding-block: 0;
+        margin-left: 20px;
+    }
+    .containerAJudul{
+        height: 17px !important;
+        padding-left: 15px !important;
+        margin-bottom: 0 !important;
+        padding-bottom: 0 !important;
+    }
+    .containerAJudul h4{
+        font-size: 7px !important;
+    }
+    .carousel-control-prev,
+    .carousel-control-next {
+        color: #66B82E !important;
+        font-size: 10px !important;
+        margin: -12px !important;
+    }
+    .containerContent, .judul{
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    .judul h2{
+        font-size: 12px !important;
+    }
+    .judul p{
+        font-size: 8px !important;
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+        margin-bottom: 5px !important;
+        
+    }
+    .main-desk{
+        display: none;
+    }
+    .main-tab{
+        width: 80%;
+        margin: auto;
+        margin-top: 15px !important;
+    }
+    .beritaAtasTablet{
+        margin: 0 !important;
+        margin-bottom: 15px !important;
+    }
+    .imgDivBeritaKiri img{
+        max-height: 300px; 
+        margin-bottom: 5px !important;
+    }
+    .dateTab{
+        color: #66B82E;
+        font-style: italic;
+        font-size: 9px;
+        padding:0 !important;
+        margin:0 !important;
+    }
+    .beritaAtasTablet h3{
+        margin-top: 7px !important;
+        font-size: 13px;
+    }
+    .kontenTab {
+        font-size: 10px;        
+        padding:0 !important;
+        margin:0 !important;
+    }
+    .selengkapTab{
+        font-size: 10px;
+        margin-bottom: 20px !important;
+    }
+    .beritaBawahTablet {
+        display: flex;
+        align-items: center;
+        color: #757575;
+        padding: 0;
+        text-align: left;
+    }
+    .judulBeritaBawahTab{
+        display: none;
+    }
+    .kontenBeritaBawahTab{
+        display: none;
+    }
+    .beritaBawahTablet h4{
+        font-size: 12px;
+    }
+    .imgDivBeritaBawah {
+        margin-left: 10px; 
+        flex: 1; 
+    }
+    
+    .imgDivBeritaBawah img {
+        border-radius: 10px;
+        max-height: 60px;
+        max-width: 80px;
+        min-height: 60px;
+        min-width: 80px;
+    }
+    
+    .contentBeritaBawah {
+        flex: 2;
+        padding: 0;
+    }
+    .kontenBeritaBawahHp{
+        font-size: 10px;
+        margin-bottom: 2px;
+    }
+    .dateBeritaBawah {
+        color: #66B82E;
+        font-style: italic;
+        font-size: 9px;
+        padding: 0;
+    }
+    .galery-head{
+        margin-top: 15px !important;
+        margin-bottom: 7px !important;
+    }
+    .galeri-tab{
+        margin-bottom: 0 !important;
+        padding: 0 !important;
+    }
+    .galeri-desk{
+        display: none;
+    }
+    .carousel-inner-galery{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 0 !important;
+    }
+   .carousel-item-galery{
+        object-fit: cover;
+        width: 60px;
+        height: 60px;
+        padding: 0;
+        margin-inline: 5px !important;
+    }
+    .carousel-item-galery img{
+        width: 60px;
+        height: 60px;
+    }
+    .bgGalery{
+        width: 60px;
+        height: 60px;
+        text-align: center;
+    }
+    .bgGalery p{        
+        font-size: 10px !important;
+    }
+    .carousel-control-prev-galery,
+    .carousel-control-next-galery{
+        font-size: 15px;
+    }
+    .footerDesk{
+        display: none;
+    }
+    .highFooter{
+        padding: 0 !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 !important;
+        padding-top: 30px !important;
+    }
+    .footer{
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100% !important;
+    }
+    .highFooter img{
+        width: 160px !important;
+        text-align: center;
+        margin-top: 0 !important;
+        margin-right: 0 !important;
+        padding-right: 0 !important;
+        
+    }
+    .highFooter h6{
+        font-size: 12px !important;
+    }
+    .highFooter p{
+        font-size: 10px !important;
+    }
+    .footerPT{
+        color: white;
+        margin-top: 15px;
+        margin-bottom: 0 !important;
+    }
+    .TLFooterTab{
+        display: flex;
+        flex-direction: row;
+        margin: auto !important;
+        justify-content: space-around !important;
+        align-items: center ;
+        width: 70%;
+        box-sizing: border-box;
+        margin-bottom: 0 !important;
+        padding: 0 !important;
+        border-bottom: 1px white solid;
+        padding-bottom: 15px !important;
+    }
+    .social{
+        margin-bottom: 15px !important;
+    }
+    .TLFooterTab.tentang, 
+    .TLFooterTab .layanan{
+        box-sizing: border-box;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    .TLFooterTab h6, .TLFooterTab p{
+        color: white !important;
+        margin: 0 !important;
+    }
+    .TLFooterTab h6{
+        margin-bottom: 7px !important;
+    }
+    .hotline{
+        display: flex;
+        flex-direction: row;
+        margin: 0 !important;
+        padding: 0 !important;
+        justify-content: space-around !important;
+        margin-top: 10px !important;
+    }
+    .hotline .contactFoot{
+        width:40% !important;
+        display: flex;
+        justify-content: center !important;
+        align-items: center !important;
+
+    }
+    .hotline .infoFoot{
+        width: 60% !important;
+        display: flex;
+        justify-content: center !important;
+        align-items: center !important;
+
+    }
+    .hotlineFooter{
+        margin-left: 10px;
+    }
+    .hotline .contactFoot img{
+        width: 20px !important;
+        color: white !important;
+        margin: 0 !important;
+    }
+    .hotline .contactFoot p{
+        font-size: 10px !important;
+        color: white !important;
+        margin: 0 !important;
+        width: 100% !important;
+    }
+    .hotline .infoFoot img{
+        width: 20px !important;
+        color: white !important;
+        margin: 0 !important;
+    }
+    .hotline .infoFoot p{
+        font-size: 10px !important;
+        color: white !important;
+        margin: 0 !important;
+        width: 100% !important;
+    }
+    .lowerFooter{
+        margin-top: 30px !important;
+    }
+    .profilNew{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .profilNew img{
+        margin: auto;
+        height: 100px !important;
+        margin-block: 15px !important;
+    }
+    .gambarPofil{
+        object-fit: cover;
+        width: 100%;
+        min-height: 150px !important;
+    }
+    .profilNew .penjelasanProfil{
+        box-sizing: border-box;
+        padding: 20px;
+        color: rgba(0, 0, 0, 0.8);
+        margin: 0;
+    }
+    .profilLayanan{
+        box-sizing: border-box;
+        padding: 20px;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+    .profilLayanan h6{
+        font-size: 13px;
+    }
+    .profilNew p{
+        font-size: 10px;
+    }
+    .profilCrumb{
+        font-size: 9px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    .headingProfil{
+        margin-top: 10px;
+        font-size: 15px;
+    }
+    .breadTop{
+        margin: 0 !important;
+        padding-top: 50px !important;
+    }
+    .visiNew{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .visiNew img{
+        margin-top: 10px !important;
+        object-fit: cover;
+        width: 100%;
+        min-height: 100px !important;
+    }
+    .visiNew h6{
+        font-size: 13px;
+
+    }
+    .visiNew p{
+        font-size: 10px;
+    }
+    .visiIsi{
+        padding: 20px !important;
+        margin-bottom: 10px;
+    }
+    .misiIsi{
+        padding: 20px !important;
+        margin-bottom: 10px;
+    }
+    .visiMisiCrumb{
+        font-size: 9px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    .headingVisiMisi{
+        margin-top: 10px;
+        font-size: 15px !important;
+    }
+    .aduanCrumb{
+        font-size: 9px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    .headingAduan{
+        margin-top: 10px !important;
+        font-size: 15px;
+    }
+    .aduanSiber{
+        margin-top: 10px !important;
+        
+    }
+    .aduanSiber h6{
+        font-size: 14px !important;
+        margin: 0 !important;
+        margin-left: 5px !important;
+
+    }
+    .aduanSiber ol{             
+        margin: 0 !important;
+        padding: 0 !important;
+        margin-top: 5px !important;
+        margin-bottom: 15px !important;
+    }
+    .aduanSiber li{
+        font-size: 12px !important;  
+        margin-left: 20px !important; 
+    }
+    .aduanSiber p{
+        font-size: 12px !important;
+        margin: 0 !important;
+        margin-bottom: 7px;
+    }
+    .imgAduan{
+        display: flex; 
+        justify-content: center;
+        align-content: center; 
+        margin-top: 20px !important;
+    }
+    .imgAduan img{
+        width: 50%;
+        margin-top: 10px !important;
+    }
+    .VACrumb{
+        font-size: 9px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    .headingVA{
+        margin-top: 10px !important;
+        font-size: 15px;
+    }
+    .layananVA{
+        margin-top: 10px !important;
+        
+    }
+    .layananVA h6{
+        font-size: 13px;
+        margin: 0 !important;
+
+    }
+    .layananVA p{
+        font-size: 10px;
+        margin: 0 !important;
+        margin-bottom: 7px !important;
+    }
+    .layananVA li{
+        font-size: 11px;
+        margin: 0 !important;
+    }
+    .imgAduan{
+        display: flex; 
+        justify-content: center;
+        align-content: center; 
+        margin-top: 10px !important;
+    }
+    .rfc{
+        margin-top: 50px !important;
+        padding-top: 0 !important;
+    }
+    .rfc h3{
+        font-size: 15px !important;
+    }
+    .rfc h4{
+        font-size: 14px !important;
+        margin-top: 12px !important;
+    }
+    .rfc h5{
+        font-size: 13px !important;
+        margin-left: 20px !important;
+        margin-top: 10px !important;
+    }
+    .rfc h6{
+        font-size: 13px !important;
+        margin-left: 40px !important;
+        margin-top: 10px !important;
+    }
+    .rfc p{
+        font-size: 11px !important;
+        margin-left: 20px !important;
+
+    }
+    .rfc pre {
+        font-size: 11px !important;
+    }
+    .rfc .second{
+        margin-left: 40px !important;
+
+    }
+    .rfc .third{
+        margin-left: 50px !important;
+
+    }
+    .panduan h6{
+        font-size: 14px !important;
+        margin: 0 !important;
+        margin-left: 5px !important;
+        margin-top: 20px !important;
+    }
+    .panduan p{
+        font-size: 12px !important;
+    }
+    .panduan td {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .filename {
+        flex-grow: 1; 
+        margin: 0; 
+    }
+    
+    span[id^="file_size_"] {
+        width: 100px; 
+        text-align: right; 
+    }
+    .eventStyle {
+        margin-top: 50px !important;
+    }
+    .eventStyle h3{
+        font-size: 15px !important;
+    }
+    .eventStyle h5{
+        font-size: 11px !important;
+    }
+    .eventStyle p{
+        font-size: 9px !important;
+        margin: 0 !important;
+    }
+    .eventStyle .table {
+        text-align: center; 
+        margin-top: 15px !important;
+    }
+    
+    .eventStyle .table th,
+    .eventStyle .table td {
+        vertical-align: middle;
+        padding: 10px;
+    }
+    .eventStyle td {
+        padding-inline: 0 !important;
+    }
+    .eventStyle .table th{
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    .hubungiKami{
+        margin-top: 50px !important;
+    }
+    .hubungiKami h3 {
+        font-size: 15px !important;
+    }
+    .hubungiKami p{
+        font-size: 10px !important;
+    }
+    .hubungiKamiDesk{
+        display: none;
+    }
+    .hubungiKamiMobile {
+        margin: 0 !important;
+    }
+    .hubungiKamiMobile .img{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 30px !important;
+    }
+    .hubungiKamiMobile img{
+        width: 70% !important;
+    }
+    .hubungiKamiMobile .alamat{
+        padding: 0 !important;
+        margin-bottom: 10px !important;
+
+    }
+    .hubungiKamiMobile .kontak {
+        margin-bottom: 10px !important;
+        padding: 0 !important;
+    }
+    .hubungiKamiMobile .hubkiri{
+        height: 200px !important;
+        margin: 0 !important;
+    }
+    .hubungiKamiMobile .hubkiri iframe{
+        height: 200px !important;
+    }
+    
+
+}
+@media only screen and (max-width: 800px )and (min-width: 501px) {
+    .navbar-logo img {
+        height: 40px !important;
+        width: 283px !important;
+        margin: 0;
+        padding: 0;
+        left: 0;
+    }
+    .navbar-nav .fitur p {
+        margin: 10px;
+        font-size: 13px;
+    }
+    .nav-item {
+        font-size: 15px;
+        text-align: center;
+    }
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-content {
+        display: none;
+        background-color: rgba(229, 239, 254, 0.8);
+        position: relative !important;
+        margin: auto;
+        width: 100%;
+    }
+
+    .dropdown-content a {
+        
+        font-size: 13px !important;
+        color: #0D2E5B;
+        display: block;
+        text-align: center;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #66B82E;
+        color: #fff;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    .dropdown:hover .nav-link {
+        color: #66B82E;
+    }
+    .containerAJudul{
+        height: 40px !important;
+    }
+    .carousel-item img{
+        max-height: 266px !important;
+        object-fit: cover;
+        padding: 0;
+    }
+    .overlay-text h1{
+        font-size: 24px !important;
+        margin-block: 0;
+        padding-block: 0;
+        margin-left: 15px;
+    }
+    .overlay-text p{
+        font-size: 18px !important;
+        margin-block: 0;
+        padding-block: 0;
+        margin-left: 15px;
+    }
+    .carousel-control-prev,
+    .carousel-control-next {
+        color: #66B82E !important;
+        font-size: 25px !important;
+        margin: -30px !important;
+    }
+    .containerContent, .judul{
+        margin-top: 5px !important;
+    }
+    .judul h2{
+        font-size: 20px !important;
+    }
+    .judul p{
+        font-size: 12px !important;
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+        margin-bottom: 5px !important;
+        
+    }
+    .main-desk{
+        display: none;
+    }
+    .main-tab{
+        width: 80%;
+        margin: auto;
+        margin-top: 30px;
+    }
+    
+    .beritaAtasTablet{
+        margin-bottom: 40px !important;
+    }
+
+    .judulBeritaBawah {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .dateTab{
+        color: #66B82E;
+        font-style: italic;
+        font-size: 13px !important;
+        padding:0 !important;
+        margin-top: 5px;
+        margin-bottom:10px !important;
+    }
+    .dateBeritaBawah {
+        color: #66B82E;
+        font-style: italic;
+        font-size: 13px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .beritaBawahTablet {
+        display: flex;
+        align-items: center;
+        color: #757575;
+        padding: 0;
+        margin-bottom: 30px;
+    }
+
+    .imgDivBeritaBawah {
+        margin-left: 20px; 
+        width: 90%;
+        max-height: 18px;
+        display: flex;
+        align-items: center;
+        
+    }
+
+    .imgDivBeritaBawah img {
+        border-radius: 20px;
+        margin-left: 20px;
+        max-height: 130px;
+        max-width: 190px;
+    }
+
+    .judulBeritaBawah {
+        text-align: justify;
+        font-size: 18px;
+        margin-top: 10px;
+        max-width: 100%; 
+    }
+
+    .kontenBeritaBawahTab {
+        text-align: justify;
+        margin-top: 10px;
+        max-width: 100%; 
+        margin-bottom: 5px !important;
+    }
+    .kontenBeritaBawahHp{
+        display: none;
+    }
+    .judulBeritaBawahHp{
+        display: none;
+    }
+    .selengkapTab{
+        font-size: 14px !important;
+    }
+    .kontenTab{
+        margin-bottom: 7px !important;
+    }
+    .galery-head{
+        margin-top: 15px !important;
+        margin-bottom: 10px !important;
+    }
+    .galeri-desk{
+        display: none;
+    }
+    .carousel-inner-galery{
+        padding: 0;
+        margin: auto !important;
+        display: flex;
+        justify-content: center;
+
+    }
+   .carousel-item-galery{
+        object-fit: cover;
+        width: 130px;
+        height: 130px;
+        padding: 0;
+        margin: 10px !important;
+    }
+    .carousel-item-galery img{
+        width: 130px;
+        height: 130px;
+    }
+    .bgGalery{
+        width: 130px;
+        height: 130px;
+        text-align: center;
+    }
+    .bgGalery p{        
+        font-size: 10px !important;
+    }
+    .carousel-control-prev-galery,
+    .carousel-control-next-galery{
+        font-size: 25px;
+        margin: 50px;
+    }
+    .tiga img{
+        width: 150px !important;
+    }
+    .footerTab{
+        display: none;
+    }
+
+    .profilNew{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .profilNew img{
+        margin: auto;
+        width: 100%;
+        margin-block: 15px !important;
+    }
+    .gambarPofil{
+        object-fit: cover;
+        width: 100%;
+        min-height: 150px !important;
+    }
+    .profilNew .penjelasanProfil{
+        box-sizing: border-box;
+        padding: 30px;
+        color: rgba(0, 0, 0, 0.8);
+        margin: 0;
+    }
+    .profilLayanan{
+        box-sizing: border-box;
+        padding: 30px;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+    .profilLayanan h6{
+        font-size: 16px;
+    }
+    .profilNew p{
+        font-size: 12px;
+    }
+    .profilCrumb{
+        font-size: 13px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    .headingProfil{
+        margin-top: 10px;
+        font-size: 18px;
+    }
+    .breadTop{
+        margin: 0 !important;
+        padding-top: 70px !important;
+    }
+    .visiNew{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .visiNew img{
+        margin-top: 30px !important;
+        object-fit: cover;
+        width: 100%;
+        min-height: 200px !important;
+    }
+    .visiNew h6{
+        font-size: 16px;
+
+    }
+    .visiNew p{
+        font-size: 13px;
+    }
+    .visiIsi{
+        padding: 30px !important;
+        margin-bottom: 10px;
+    }
+    .misiIsi{
+        padding: 30px !important;
+        margin-bottom: 10px;
+    }
+    .visiMisiCrumb{
+        font-size: 13px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    .headingVisiMisi{
+        margin-top: 10px;
+        font-size: 20px !important; 
+    }
+    .aduanCrumb{
+        font-size: 13px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    .headingAduan{
+        margin-top: 10px !important;
+        font-size: 20px !important;
+    }
+    .aduanSiber{
+        margin-top: 10px !important;
+        
+    }
+    .aduanSiber h6{
+        font-size: 18px !important;
+        margin: 0 !important;
+        margin-left: 5px !important;
+
+    }
+    .aduanSiber ol{             
+        margin: 0 !important;
+        padding: 0 !important;
+        margin-top: 5px !important;
+        margin-bottom: 15px !important;
+    }
+    .aduanSiber li{
+        font-size: 16px !important;  
+        margin-left: 30px !important; 
+        margin-top: 7px !important;
+    }
+    .aduanSiber p{
+        font-size: 15px !important;
+        margin: 0 !important;
+        margin-bottom: 7px;
+    }
+    .imgAduan{
+        display: flex; 
+        justify-content: center;
+        align-content: center; 
+        margin-top: 20px !important;
+    }
+    .imgAduan img{
+        width: 50%;
+        margin-top: 10px !important;
+    }
+    .VACrumb{
+        font-size: 13px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    .headingVA{
+        margin-top: 10px !important;
+        font-size: 17px;
+    }
+    .layananVA{
+        margin-top: 10px !important;
+        
+    }
+    .layananVA h6{
+        font-size: 16px !important;
+        margin: 0 !important;
+
+    }
+    .layananVA p{
+        font-size: 13px !important;
+        margin: 0 !important;
+        margin-bottom: 12px !important;
+    }
+    .layananVA li{
+        font-size: 14px !important;
+        margin: 0 !important;
+    }
+    .imgAduan{
+        display: flex; 
+        justify-content: center;
+        align-content: center; 
+        margin-top: 10px !important;
+    }
+    .rfc{
+        margin-top: 50px !important;
+        padding-top: 0 !important;
+    }
+    .rfc h3{
+        font-size: 20px !important;
+    }
+    .rfc h4{
+        font-size: 19px !important;
+        margin-top: 12px !important;
+    }
+    .rfc h5{
+        font-size: 18px !important;
+        margin-left: 20px !important;
+        margin-top: 10px !important;
+    }
+    .rfc h6{
+        font-size: 17px !important;
+        margin-left: 40px !important;
+        margin-top: 10px !important;
+    }
+    .rfc p{
+        font-size: 15px !important;
+        margin-left: 20px !important;
+
+    }
+    .rfc pre {
+        font-size: 15px !important;
+    }
+    .rfc .second{
+        margin-left: 40px !important;
+
+    }
+    .rfc .third{
+        margin-left: 50px !important;
+    }
+    .panduan h6{
+        font-size: 18px !important;
+        margin: 0 !important;
+        margin-left: 5px !important;
+        margin-top: 20px !important;
+    }
+    .panduan p{
+        font-size: 15px !important;
+    }
+    .panduan td {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .filename {
+        flex-grow: 1; 
+        margin: 0; 
+    }
+    
+    span[id^="file_size_"] {
+        width: 100px; 
+        text-align: right; 
+    }
+    .eventStyle {
+        margin-top: 70px !important;
+    }
+    .eventStyle h3{
+        font-size: 20px !important;
+    }
+    .eventStyle h5{
+        font-size: 17px !important;
+    }
+    .eventStyle p{
+        font-size: 14px !important;
+        margin: 0 !important;
+    }
+    .eventStyle .table {
+        text-align: center; 
+        margin-top: 30px !important;
+    }
+    
+    .eventStyle .table th,
+    .eventStyle .table td {
+        vertical-align: middle;
+        padding: 15px;
+    }
+    .eventStyle td {
+        padding-inline: 0 !important;
+    }
+    .eventStyle .table th{
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    .hubungiKamiMobile{
+        display: none;
+    }
+    .hubungiKami{
+        margin-top: 70px !important;
+    }
+    .hubungiKami h3 {
+        font-size: 20px !important;
+    }
+    .hubungiKami p {
+        font-size: 14px !important;
+    }
+    .hubungiKami img{
+        width: 100% !important;
+    }
+    .hubungiKami .hubkiri{
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    .hubungiKami .alamat {
+        margin-bottom: 15px !important; 
+        padding: 0 !important;
+    }
+    .hubungiKami .alamat i{
+        margin: auto; 
+        font-size: 25px; 
+        padding-right: 15px;
+    }
+    .hubungiKami img {
+        margin-bottom: 15px !important;
+    }
+    .hubungiKami .kontak{
+        margin-bottom: 15px !important;
+        padding: 0 !important;
+    }
+    
+
+}
+@media only screen and (max-width: 1000px )and (min-width: 800px) {
+   
+    .navbar-collapse{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    
+    }
+    .navbar-logo {
+        width: 30%; 
+    }
+    
+    .navbar-logo img {
+        width: 355px !important;
+        height: 50px;
+    }
+    .navbar-toggler{
+        margin-right: 10px;
+    }
+    .TogglerIcon {
+        border-radius: 2px;
+        font-size: 14px;
+    }
+    
+    .navbar-toggler:focus,
+    .navbar-toggler:active {
+        box-shadow: none;
+        outline: none;
+    }
+    
+    .nav-item {
+        font-size: 15px;
+        text-align: center;
+    }
+    .nav-link {
+        font-size: 15px;
+        color: #0D2E5B;
+    }
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-content {
+        display: none;
+        background-color: rgba(229, 239, 254, 0.8);
+        position: relative !important;
+        margin: auto;
+        width: 100%;
+    }
+
+    .dropdown-content a {
+        
+        font-size: 13px !important;
+        color: #0D2E5B;
+        display: block;
+        text-align: center;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #66B82E;
+        color: #fff;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    .dropdown:hover .nav-link {
+        color: #66B82E;
+    }
+
+    .navbar-nav .fitur p {
+        margin: 10px;
+    }
+    .fitur {
+        color: #FFF !important;
+        font-family: 'Inter', sans-serif;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        margin-left: 20px;
+    }
+
+    .main-desk{
+        display: none;
+    }
+    .main-tab{
+        width: 80%;
+        margin: auto;
+        margin-top: 30px;
+    }
+    .beritaAtasTablet{
+        margin-bottom: 20px;
+    }
+    .beritaBawahTabletContainer {
+        margin-bottom: 30px; 
+    }
+
+    .judulBeritaBawah {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .dateBeritaBawah {
+        color: #66B82E;
+        font-style: italic;
+        font-size: 13px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .beritaBawahTablet {
+        display: flex;
+        align-items: center;
+        color: #757575;
+        padding: 0;
+        margin-bottom: 30px;
+    }
+
+    .imgDivBeritaBawah {
+        margin-left: 20px; 
+        width: 90%;
+        max-height: 18px;
+        display: flex;
+        align-items: center;
+        
+    }
+
+    .imgDivBeritaBawah img {
+        border-radius: 20px;
+        margin-left: 20px;
+        max-height: 130px;
+        max-width: 190px;
+    }
+
+    .judulBeritaBawah {
+        text-align: justify;
+        font-size: 18px;
+        margin-top: 10px;
+        max-width: 100%; 
+    }
+
+    .kontenBeritaBawah {
+        text-align: justify;
+        margin-top: 10px;
+        max-width: 100%; 
+        margin-bottom: 5px;
+    }
+    .galeri-desk{
+        display: none;
+    }
+   .carousel-inner-galery{
+        margin-left: 0;
+        padding: 0;
+        margin: auto;
+        width: 80%;
+    }
+   .carousel-item-galery{
+        object-fit: cover;
+        width: 150px;
+        height: 150px;
+        padding: 0;
+    }
+    .carousel-item-galery img{
+        width: 150px;
+        height: 150px;
+    }
+    .carousel-control-prev-galery,
+    .carousel-control-next-galery{
+        margin: 0;
+        padding: 0;
+    }
+
+
+    
+
+}
+@media only screen and (max-width: 1200px )and (min-width: 1001px) {
+    .nav-item {
+        font-size: 15px;
+        text-align: center;
+    }
+    .navbar-nav .fitur p {
+        margin-bottom: 20px;
+        font-size: 15px;
+    }
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-content {
+        display: none;
+        background-color: rgba(229, 239, 254, 0.8);
+        position: relative !important;
+        margin: auto;
+        width: 100%;
+    }
+
+    .dropdown-content a {
+        
+        font-size: 15px !important;
+        color: #0D2E5B;
+        display: block;
+        text-align: center;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #66B82E;
+        color: #fff;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    .dropdown:hover .nav-link {
+        color: #66B82E;
+    }
+    .containerContent, .judul{
+        margin-top: 10px !important;
+    }
+    .carousel-item img{
+        max-height: 355px !important;
+        object-fit: cover;
+        padding: 0;
+    }
+    .overlay-text h1{
+        font-size: 27px !important;
+        margin-block: 0;
+        padding-block: 0;
+        margin-left: 20px;
+    }
+    .overlay-text p{
+        font-size: 22px !important;
+        margin-block: 0;
+        padding-block: 0;
+        margin-left: 20px;
+    }
+    .containerAJudul{
+        height: 45px !important;
+        padding-left: 53px !important;
+        margin-bottom: 0 !important;
+        padding-bottom: 0 !important;
+    }
+    .containerAJudul h4{
+        font-size: 20px !important;
+    }
+    .beritaKiri{
+        margin-bottom: 30px !important;
+    }
+    .dateDesk{
+        color: #66B82E;
+        font-style: italic;
+        font-size: 13px;
+        padding:0;
+        margin:0;
+    }
+    .dateDeskKanan{
+        font-size: 12px;
+        padding:0;
+        margin:0
+    }
+    .judulKananDesk{
+        font-size: 14px !important;
+    }
+    .kontenDeskKanan{
+        text-align: justify; 
+        margin-bottom: 7px
+    }
+    .dateKiriDesk{
+        font-size: 14px;
+        padding:0;
+        margin:0;
+    }
+    .judulKiriDesk{
+        margin-top: 7px;
+        font-size: 20px
+    }
+    .KontenKiriDesk{
+        font-size: 14px;
+        margin-bottom: 7px
+    }
+    .galery-head{
+        margin-top: 15px !important;
+        margin-bottom: 20px !important;
+    }
+    .carousel-inner-galery{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .carousel-item-galery{
+        object-fit: cover;
+        width: 200px;
+        height: 200px;
+        padding: 0;
+        margin: 10px !important;
+    }
+    .carousel-item-galery img{
+        width: 200px;
+        height: 200px;
+    }
+    .bgGalery{
+        width: 200px;
+        height: 200px;
+        text-align: center;
+    }
+    .bgGalery p{        
+        font-size: 10px !important;
+    }
+    .carousel-control-prev-galery,
+    .carousel-control-next-galery{
+        font-size: 25px;
+        margin: 30px !important;
+    }
+    .tiga img{
+        width: 200px;
+    }
+    
+    .profilNew{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .profilNew img{
+        margin: auto;
+        width: 100%;
+        margin-block: 15px !important;
+    }
+    .gambarPofil{
+        object-fit: cover;
+        width: 100%;
+        min-height: 150px !important;
+    }
+    .profilNew .penjelasanProfil{
+        box-sizing: border-box;
+        padding: 30px;
+        color: rgba(0, 0, 0, 0.8);
+        margin: 0;
+    }
+    .profilLayanan{
+        box-sizing: border-box;
+        padding: 30px;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+    .profilLayanan h6{
+        font-size: 18px;
+    }
+    .profilNew p{
+        font-size: 14px;
+    }
+    .profilCrumb{
+        font-size: 13px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    .headingProfil{
+        margin-top: 10px;
+        font-size: 18px;
+    }
+    .breadTop{
+        margin: 0 !important;
+        padding-top: 80px !important;
+    }
+    .visiNew{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .visiNew img{
+        margin-top: 30px !important;
+        object-fit: cover;
+        width: 100%;
+        min-height: 300px !important;
+    }
+    .visiNew h6{
+        font-size: 18px;
+
+    }
+    .visiNew p{
+        font-size: 14px;
+    }
+    .visiIsi{
+        padding: 30px !important;
+        margin-bottom: 10px;
+    }
+    .misiIsi{
+        padding: 30px !important;
+        margin-bottom: 10px;
+    }
+    .visiMisiCrumb{
+        font-size: 14px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    .headingVisiMisi{
+        margin-top: 10px;
+        font-size: 22px !important;
+    }
+    .aduanCrumb{
+        font-size: 14px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    .headingAduan{
+        margin-top: 10px !important;
+        font-size: 22px !important;
+    }
+    .aduanSiber{
+        margin-top: 10px !important;
+        
+    }
+    .aduanSiber h6{
+        font-size: 20px !important;
+        margin: 0 !important;
+        margin-left: 5px !important;
+
+    }
+    .aduanSiber ol{             
+        margin: 0 !important;
+        padding: 0 !important;
+        margin-top: 5px !important;
+        margin-bottom: 15px !important;
+    }
+    .aduanSiber li{
+        font-size: 18px !important;  
+        margin-left: 30px !important; 
+        margin-top: 7px !important;
+    }
+    .aduanSiber p{
+        font-size: 17px !important;
+        margin: 0 !important;
+        margin-bottom: 7px;
+    }
+    .imgAduan{
+        display: flex; 
+        justify-content: center;
+        align-content: center; 
+        margin-top: 20px !important;
+    }
+    .imgAduan img{
+        width: 50%;
+        margin-top: 10px !important;
+    }
+    .rfc{
+        margin-top: 50px !important;
+        padding-top: 0 !important;
+    }
+    .rfc h3{
+        font-size: 22px !important;
+    }
+    .rfc h4{
+        font-size: 21px !important;
+        margin-top: 12px !important;
+    }
+    .rfc h5{
+        font-size: 20px !important;
+        margin-left: 20px !important;
+        margin-top: 10px !important;
+    }
+    .rfc h6{
+        font-size: 19px !important;
+        margin-left: 40px !important;
+        margin-top: 10px !important;
+    }
+    .rfc p{
+        font-size: 17px !important;
+        margin-left: 20px !important;
+
+    }
+    .rfc pre {
+        font-size: 17px !important;
+    }
+    .rfc .second{
+        margin-left: 40px !important;
+
+    }
+    .rfc .third{
+        margin-left: 50px !important;
+
+    }
+    .panduan h6{
+        font-size: 20px !important;
+        margin: 0 !important;
+        margin-left: 5px !important;
+        margin-top: 20px !important;
+    }
+    .panduan p{
+        font-size: 17px !important;
+    }
+    .panduan td {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .filename {
+        flex-grow: 1; 
+        margin: 0; 
+    }
+    
+    span[id^="file_size_"] {
+        width: 100px; 
+        text-align: right; 
+    }
+    .eventStyle {
+        margin-top: 80px !important;
+    }
+    .eventStyle h3{
+        font-size: 22px !important;
+    }
+    .eventStyle h5{
+        font-size: 20px !important;
+    }
+    .eventStyle p{
+        font-size: 17px !important;
+        margin: 0 !important;
+    }
+    .eventStyle .table {
+        text-align: center; 
+        margin-top: 30px !important;
+    }
+    
+    .eventStyle .table th,
+    .eventStyle .table td {
+        vertical-align: middle;
+        padding: 15px;
+    }
+    .eventStyle td {
+        padding-inline: 0 !important;
+    }
+    .eventStyle .table th{
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    .hubungiKamiMobile{
+        display: none;
+    }
+    .hubungiKami{
+        margin-top: 80px !important;
+    }
+    .hubungiKami h3 {
+        font-size: 22px !important;
+    }
+    .hubungiKami p {
+        font-size: 17px !important;
+    }
+    .hubungiKami img{
+        width: 100% !important;
+    }
+    .hubungiKami .hubkiri{
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    .hubungiKami .alamat {
+        margin-bottom: 15px !important; 
+        padding: 0 !important;
+    }
+    .hubungiKami .alamat i{
+        margin: auto; 
+        font-size: 25px; 
+        padding-right: 15px;
+    }
+    .hubungiKami img {
+        margin-bottom: 15px !important;
+    }
+    .hubungiKami .kontak{
+        margin-bottom: 15px !important;
+        padding: 0 !important;
+    }
+}
+@media only screen and (max-width: 1300px) {
+    .bg{
+        background-color: white;
+        padding-bottom: 50px;
+        width:100% ;
+        margin: 0;
+        padding: 0;
+    }
+    .beranda{
+        width: 100% !important;
+        margin: 0;
+        padding: 0;
+    }
+    h1,h2{
+        font-size: 21px;
+    }
+    
+    h3{
+        font-size: 19px;
+    }
+    h4{
+        font-size: 18px;
+    }
+    h5{
+        font-size: 17px;
+    }
+    h6{
+        font-size: 16px;
+    }
+    p{
+        font-size: 12px;
+    }
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: rgba(229, 239, 254, 0.8);
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+        z-index: 1;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+    .bg{
+        background-color: white;
+        padding-bottom: 40px;
+    }
+    .nav-link, .fiturMenu {
+        font-size: 10px; 
+        margin: 0;
+        padding: 0;
+    }
+    .navbar-logo img {
+        width: 307px;
+        padding: 0;
+        margin: 0;
+    }
+    .nav-item{
+        padding: 0;
+        margin: 0;
+    }
+    .dropdown-content a {
+        font-size: 10px;
+        margin: 0;
+        padding: 5px 10px;
+    }
+    .dropdown-content a:hover {
+        background-color: #66B82E;
+        color: #fff;
+    }
+    
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+    
+    .dropdown:hover .nav-link {
+        color: #66B82E;
+    }
+    .containerAJudul {
+        height: 10%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0;
+    }
+
+    .containerAJudul h4 {
+        font-size: 15px;
+        margin: 0;
+    }
+    .carousel-control-prev,
+    .carousel-control-next {
+        color: #66B82E !important;
+        font-size: 30px;
+        margin: -45px;
+    }
+    .containerContent{
+        margin-top: 30px;
+        margin-left: 12px;
+    }
+
+    .judul h2{
+        margin: 0;
+    }
+    .judul p{
+        margin-top: 5px;
+    }
+    .layanDrop{
+        width: 90px;
+        text-align: center
+    }
+    .main{
+        box-sizing: border-box;
+        padding-inline: 35px;
+    }
+    .kiri{
+        /* margin-top: 30px; */
+    }
+    .kanan{
+        background-color: rgba(234, 241, 255, 1);
+        /* width: 30%;  */
+        margin-top: 25px;
+        border-radius: 8px;
+    }
+    .kanan img{
+        height: 120px; 
+        object-fit: cover; 
+        margin-bottom: 5px;
+        border-radius: 8px; 
+    }
+    .galery-head{
+        position: relative; 
+        margin: 0;
+        padding: 0; 
+        margin-top: 50px;
+        margin-bottom: 40px;
+    }
+    .carousel-item-galery img {
+        object-fit: cover;
+        max-height: 150px !important;
+        max-width: 255px;
+        margin: auto;
+    }
+    .highFooter {
+        display: flex; 
+        justify-content: space-around; 
+        padding-block: 30px; 
+        padding-left: 45px;
+        
+    
+    }
+    .highFooter a, .highFooter h6{
+        font-size: 12px;
+    }
+    .empat img{
+        width: 9%;
+    }
+    .breadTop{
+        padding-top: 80px; 
+        margin-bottom: 0;
+    }
+    .rfc{
+        padding-top: 80px;
+    }
+    .rfc h4 {
+        margin-top: 25px;
+        margin-left: 0; 
+    }
+
+    .rfc h5 {
+        margin-top: 15px;
+        margin-left: 30px;
+    }
+
+    .rfc h6 {
+        margin-top: 10px;
+        margin-left: 80px;
+        font-size: 14px;
+    }
+
+    .rfc p{
+        margin-left: 70px;
+        margin-block: 0;
+        padding: 0;
+    }
+    .hubKanan{
+        padding: 30px;
+    }
+    .hubkanan img{
+        margin: 0 auto 20px; 
+        display: block;
+    }
+}
