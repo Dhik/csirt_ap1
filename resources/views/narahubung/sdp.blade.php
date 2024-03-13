@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>@yield('title', 'Narahubung')</title>
     <!-- Favicon -->
-    <link href={{ asset('img/favicon.ico') }} rel="icon">
+    <link href="{{ asset('img/favicon.ico') }}" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,16 +19,16 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
-    <link href={{ asset('lib/owlcarousel/assets/owl.carousel.min.css') }} rel="stylesheet">
-    <link href={{ asset('lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css') }} rel="stylesheet" />
+    <link href="{{ asset('lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css') }}" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href={{ asset('css/bootstrap.min.css') }} rel="stylesheet">
+    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
 
     <!-- Template Stylesheet -->
-    <link href={{ asset('css/style.css') }} rel="stylesheet">
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     <!-- Template Stylesheet -->
-    <link href={{ asset('css/pimpinan.css') }} rel="stylesheet">
+    <link href="{{ asset('css/pimpinan.css') }}" rel="stylesheet">
 
     {{-- css global ours --}}
     <link rel="stylesheet" href="{{ asset('css/admin.css') }}">
@@ -125,6 +125,7 @@
                         <table class="table">
                             <thead>
                                 <tr>
+                                    <th scope="col">No Ticket</th>
                                     <th scope="col">Requester Name</th>
                                     <th scope="col">Short Description</th>
                                     <th scope="col">Created Time</th>
@@ -137,6 +138,7 @@
                             <tbody>
                                 @foreach($requests as $request)
                                 <tr>
+                                    <td>{{$request['id']}}</td>
                                     <td>{{$request['requester']['name']}}</td>
                                     <td>{!! $request['short_description'] !!}</td>
                                     <td>{{$request['created_time']['display_value']}}</td>
@@ -243,14 +245,6 @@
     </div>
 </div>
     @stack('scripts')
-    <script>
-    $(document).ready(function() {
-        @foreach($requests as $index => $request)
-        var shortDescription = {!! json_encode($request['short_description']) !!};
-        $('#short_description_container_{{$index + 1}}').html(shortDescription);
-        @endforeach
-    });
-</script>
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>

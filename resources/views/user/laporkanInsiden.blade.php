@@ -59,7 +59,7 @@
         <div class="login-box">
             <div class="left-box">
                 <div class="title-box">
-                    <h2 style="margin: 0;padding: 0">LOGIN SISTEM LAPORKAN INSIDEN</h2>
+                    <h2 style="margin: 0;padding: 0">LOGIN</h2>
                 </div>
                 <div class="login-form">
                     @if(session('error'))
@@ -80,8 +80,13 @@
             </div>
             <div class="right-box">
                 <!-- Tambahkan elemen untuk gambar -->
-                <img src="img/loginGambar.svg" alt="Login Image" class="img-fluid"
-                    style="max-height: 100%; max-width: 100%;">
+                <div class="col">
+                    <h2 style="color: #0072B9;">SISTEM LAPORKAN INSIDEN</h2>
+                    <img src="img/loginGambar.png" alt="Login Image" class="img-fluid"
+                        style="max-height: 70%; max-width: 70%; display: block;
+  margin-left: auto;
+  margin-right: auto;">
+                </div>
                 <!-- Tambahkan tautan kembali ke beranda -->
                 <a href="{{ route('user.beranda') }}" class="back-to-home btn">Kembali Ke Beranda</a>
             </div>

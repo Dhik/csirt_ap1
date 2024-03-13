@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>@yield('title', 'Narahubung')</title>
     <!-- Favicon -->
-    <link href={{ asset('img/favicon.ico') }} rel="icon">
+    <link href="{{ asset('img/favicon.ico') }}" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,19 +19,19 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
-    <link href={{ asset('lib/owlcarousel/assets/owl.carousel.min.css') }} rel="stylesheet">
-    <link href={{ asset('lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css') }} rel="stylesheet" />
+    <link href="{{ asset('lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css') }}" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href={{ asset('css/bootstrap.min.css') }} rel="stylesheet">
+    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
 
     <!-- Template Stylesheet -->
-    <link href={{ asset('css/style.css') }} rel="stylesheet">
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     <!-- Template Stylesheet -->
-    <link href={{ asset('css/pimpinan.css') }} rel="stylesheet">
+    <link href="{{ asset('css/pimpinan.css') }}" rel="stylesheet">
 
     {{-- css global ours --}}
-    <link rel="stylesheet" href={{ asset('css/admin.css') }}>
+    <link rel="stylesheet" href="{{ asset('css/admin.css') }}">
 </head>
 
 <body>
@@ -222,9 +222,11 @@
                     <div class="mb-3">
                         <label for="status">Status</label>
                         <select class="form-control" id="status" name="status" required>
-                            <option value="Pending">Pending</option>
+                            <option value="Open">Open</option>
+                            <option value="Resolve">Resolve</option>
+                            <option value="Action">Action</option>
                             <option value="In Progress">In Progress</option>
-                            <option value="Close">Close</option>
+                            <option value="On Hold">On Hold</option>
                         </select>
                     </div>
                     <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="tutupModal()">Tutup</button>

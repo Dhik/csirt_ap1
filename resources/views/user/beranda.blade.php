@@ -33,21 +33,21 @@
                     <div class="kiri">
                         @include('user.components._konten-berita-kiri')
                     </div>
-                    <div class="kanan">
-                        @include('user.components._konten-berita-kanan')
-        
-                        @if($content->count() > 5)
-                            <div class="lihatSemua">
-                                <a href="{{ route('daftarBerita') }}" >Lihat Semua</a>
-                            </div>
+                    
+                        <div class="kanan">
+                        @if($latestContent)
+                            <p style="padding-top: 10px; padding-left: 10px; margin-bottom: 0px;">Terakhir update: {{ $latestContent->updated_at->format('d/m/Y') }}</p>
+                        @else
+                            <p style="padding-top: 10px; padding-left: 10px; margin-bottom: 0px;">Terakhir update: Tidak ada informasi</p>
                         @endif
-                    </div>
+                        @include('user.components._konten-berita-kanan')
+                        </div>
                 @else
                     @if($content->count() > 0)
                         @foreach($content->take(1) as $item)
                             <div>
                                 <div style="text-align: center; margin: auto">
-                                    <img src="{{ asset('storage/' . $item->gambar) }}" alt="content" style="width: 10px;">
+                                    <img src="{{ asset('storage/' . $item->gambar) }}" alt="content"    >
                                 </div>
                                 <p style="color: #66B82E;font-style: italic;font-size: 13px;padding:0;margin:0;">{{ \Carbon\Carbon::parse($item->updated_at)->format('d M Y') }}</p>
                                 <h3 style="margin-top: 15px">{{$item->judul}}</h3>

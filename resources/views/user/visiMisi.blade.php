@@ -12,8 +12,9 @@
     <h3 class="headingVisiMisi">Visi Misi</h3>
     <hr>
     <div class="visiNew">
-        <img src="/img/gambarVisi.svg" alt="gambarVisi" style="background-color:#F5F9FF;">
-        <div style="background-color:#F5F9FF;" class="visiIsi">
+        <img src="/img/gambarVisi.svg" alt="gambarVisi" style="background-color:#F5F9FF; border-radius: 10px;">
+        <br/>
+        <div style="background-color:#F5F9FF; border-radius: 10px;" class="visiIsi">
             <h6 >Visi</h6>
             @foreach ($visis as $visi)
                 <div >

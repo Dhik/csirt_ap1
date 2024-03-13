@@ -48,7 +48,7 @@
                             </td>
                             
                             <td>
-                                @if($report->status == 'Pending')
+                                @if($report->status == 'Open')
                                     <button class="btn btn-sm btn-primary ButtonAksi" style="width: 80px;" onclick="tampilkanModal('update', {{ $report->id  }})">Edit</button>
                                     <form action="{{ route('pelapor.delete', ['id' => $report->id]) }}" method="post" onsubmit="return confirm('Are you sure you want to delete this content?')">
                                         @csrf
@@ -111,12 +111,12 @@
                         <label for="penanganan">Penanganan</label>
                         <textarea class="form-control" id="penanganan" name="penanganan" rows="4" value="-"></textarea>
                     </div> -->
-                    <div class="mb-3">
+                    <!-- <div class="mb-3">
                         <label for="status">Status</label>
                         <select class="form-control" id="status" name="status" >
-                            <option value="Pending">Pending</option>
+                            <option value="Open">Open</option>
                         </select>
-                    </div>
+                    </div> -->
                     <div class="mb-3">
                         <label for="bukti">Bukti</label>
                         <input type="file" class="form-control" id="bukti" name="bukti">

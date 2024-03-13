@@ -37,6 +37,7 @@ class NarahubungController extends Controller
 
             $requests = $response->json();
             $requests = $requests['requests'];
+            // return response()->json($requests);
 
             return view('narahubung.sdp', compact('requests'));
         } catch (Exception $e) {

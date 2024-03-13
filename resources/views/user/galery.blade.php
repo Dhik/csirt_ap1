@@ -4,7 +4,7 @@
 
 <div class="container">
     <div class="breadcrumb d-flex justify-content-between" style="padding-top: 100px; margin-bottom: 0;">
-        <div>Galeri | <a href="{{ route('user.beranda') }}">Kembali</a></div>
+        <div style="font-size: 20px;">Galeri | <a href="{{ route('user.beranda') }}">Kembali</a></div>
     </div>
 
     <div class="row mt-3" style="padding-top: 40px">

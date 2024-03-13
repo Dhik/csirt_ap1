@@ -12,7 +12,7 @@
                     <input type="hidden" name="report_id" id="report_id" value="">
                     
                     <div class="mb-3">
-                        <label for="satker">SATKER</label>
+                        <label for="satker">Unit</label>
                         <input class="form-control" type="text" name="satker" id="satker" readonly>
                     </div>
                     <div class="mb-3">
@@ -45,9 +45,11 @@
                     <div class="mb-3">
                         <label for="status">Status</label>
                         <select class="form-control" id="status" name="status" required>
-                            <option value="Pending">Pending</option>
+                            <option value="Open">Open</option>
+                            <option value="Resolve">Resolve</option>
+                            <option value="Action">Action</option>
                             <option value="In Progress">In Progress</option>
-                            <option value="Close">Close</option>
+                            <option value="On Hold">On Hold</option>
                         </select>
                     </div>
                     <div class="mb-3">

@@ -232,7 +232,7 @@ protected function storePelapor(Request $request, User $user)
             'keterangan' => $request->keterangan,
             'penanganan' => '-',
             'nama_user' => $user->nama_user,
-            'status' => $request->status,
+            'status' => 'Open',
             'bukti' => $imageName,
         ]);
 

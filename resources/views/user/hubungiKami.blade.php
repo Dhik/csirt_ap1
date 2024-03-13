@@ -10,7 +10,7 @@
         <div class="col-md-7">
             <div class="hubkiri">
                 <!-- Menampilkan peta dari alamat yang diberikan -->
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.8228916514086!2d106.83944407458866!3d-6.15446966032273!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f590b2876d69%3A0x964f7a15848b8436!2sAngkasa%20Pura%20Airports!5e0!3m2!1sen!2sid!4v1700210171177!5m2!1sen!2sid" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></iframe>            
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.8228916514086!2d106.83944407458866!3d-6.15446966032273!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f590b2876d69%3A0x964f7a15848b8436!2sAngkasa%20Pura%20Airports!5e0!3m2!1sen!2sid!4v1700210171177!5m2!1sen!2sid" style="border:0; border-radius: 10px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></iframe>            
             </div>
         </div>
         <div class="col-md-5 hubKanan">
