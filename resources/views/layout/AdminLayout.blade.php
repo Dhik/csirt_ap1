@@ -100,6 +100,8 @@
                             Management</a>
                         <a class="dropdown-item" href="{{ route('admin.layananVAManagement') }}">Layanan VA
                             Management</a>
+                        <a class="dropdown-item" href="{{ route('admin.hubungiKamiManagement') }}">Contact
+                            Management</a>
 
                     </div>
                 </li>

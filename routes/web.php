@@ -117,6 +117,7 @@ Route::prefix('/admin')->middleware(['auth', 'role:Admin'])->name('admin.')->gro
     Route::get('/aduanManagement',  [LayananKamiController::class, 'getAduan'])->name('aduanManagement');
     Route::get('/aduanManagement',  [LayananKamiController::class, 'getAduan'])->name('aduanManagement');
     Route::get('/layananVAManagement',  [LayananKamiController::class, 'getVA'])->name('layananVAManagement');
+    Route::get('/hubungiKamiManagement',  [LayananKamiController::class, 'getContact'])->name('hubungiKamiManagement');
 });
 
 Route::post('contents/storeOrUpdate', [ContentController::class, 'storeOrUpdate'])->name('contents.storeOrUpdate');
@@ -157,6 +158,9 @@ Route::post('/vas/storeOrUpdate', [EventController::class, 'storeOrUpdateVA'])->
 Route::delete('/vas/delete/{id}', [EventController::class, 'deleteVA'])->name('vas.delete');
 Route::get('/vas/show/{id}', [EventController::class, 'showVA'])->name('vas.show');
 
+// Route::post('/vas/storeOrUpdate', [EventController::class, 'storeOrUpdateVA'])->name('vas.storeOrUpdate');
+// Route::delete('/vas/delete/{id}', [EventController::class, 'deleteVA'])->name('vas.delete');
+// Route::get('/vas/show/{id}', [EventController::class, 'showVA'])->name('vas.show');
 
 Route::post('/admin/carousel/storeOrUpdate', [CarouselController::class, 'storeOrUpdate'])->name('carousel.storeOrUpdate');
 Route::delete('/admin/carousel/delete/{id}', [CarouselController::class, 'delete'])->name('carousel.delete');

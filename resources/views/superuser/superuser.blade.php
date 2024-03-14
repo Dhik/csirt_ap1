@@ -77,6 +77,7 @@
                     <div class="mb-3">
                         <label for="password">Password</label>
                         <input type="password" class="form-control" id="password" name="password">
+                        <ul id="passwordErrors" class="list-unstyled small text-danger"></ul>
                     </div>
                     <div class="mb-3">
                         <label for="status">Status</label>
@@ -153,12 +154,38 @@
         var status = document.getElementById('status').value;
 
         var formMethod = document.getElementById('formMethod').value;
+
+        var hasLength = password.length >= 8;
+        var hasCapital = /[A-Z]/.test(password);
+        var hasSpecial = /[!@#$%^&*(),.?":{}|<>]/.test(password);
+
+        var errorMessages = [];
+
         if (!role_user || !nama_user || !email || !status) {
             alert('Harap isi semua kolom yang wajib diisi.');
             event.preventDefault();
         } else if (formMethod === 'store' && !password) {
-            alert('Password harus diisi untuk operasi store.');
+            alert('Password harus diisi');
             event.preventDefault();
+        }
+        if (!hasLength) {
+            errorMessages.push('Password harus memiliki setidaknya 8 karakter.');
+        }
+        if (!hasCapital) {
+            errorMessages.push('Password harus mengandung setidaknya satu huruf kapital.');
+        }
+        if (!hasSpecial) {
+            errorMessages.push('Password harus mengandung setidaknya satu karakter khusus.');
+        }
+        var passwordErrors = document.getElementById('passwordErrors');
+        passwordErrors.innerHTML = ''; // Clear previous error messages
+        errorMessages.forEach(function(message) {
+            var listItem = document.createElement('li');
+            listItem.textContent = message;
+            passwordErrors.appendChild(listItem);
+        });
+        if (errorMessages.length > 0) {
+            event.preventDefault(); // Prevent form submission
         }
     });
 

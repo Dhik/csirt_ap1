@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Aduan;
 use App\Models\VA;
+use App\Models\Contact;
 use Illuminate\Http\Request;
 
 class LayananKamiController extends Controller
@@ -37,6 +38,13 @@ class LayananKamiController extends Controller
 
 
         return view('administrator.layananVAManagement', ['vas' => $vas]);
+    }
+    public function getContact()
+    {
+        $contacts = Contact::latest()->get();
+
+
+        return view('administrator.hubungiKamiManagement', ['contacts' => $contacts]);
     }
     public function showVA($id)
     {

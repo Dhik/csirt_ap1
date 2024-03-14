@@ -25,7 +25,6 @@
     <!-- Customized Bootstrap Stylesheet -->
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
 
-
     {{-- css global ours --}}
     <link rel="stylesheet" href="{{ asset('css/login.css') }}">
 
@@ -72,6 +71,7 @@
                         <input type="text" name="email" id="email" class="form-control" placeholder="NIP" required style="padding: 10px; text-align: center;">
                         <input type="password" name="password" id="password" class="form-control" placeholder="Password"
                             required style="padding: 10px;">
+                        <ul id="passwordErrors" class="list-unstyled small text-danger"></ul>
                         <p style="font-size: 12px; color:#323232;padding:0; margin: 0">Jika lupa password hubungi admin
                             di admin@ap1.co.id.</p>
                         <button type="submit" style="padding: 10px;"><b>Login</b></button>
@@ -97,6 +97,49 @@
             <p>© Copyright 2023 PT Angkasa Pura I</p>
         </div>
     </div> -->
+
+    <!-- JavaScript Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
+    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            var password = document.getElementById('password').value;
+
+            var hasLength = password.length >= 8;
+            var hasCapital = /[A-Z]/.test(password);
+            var hasSpecial = /[!@#$%^&*(),.?":{}|<>]/.test(password);
+
+            var errorMessages = [];
+
+            // Check for password criteria and build error messages
+            if (!hasLength) {
+                errorMessages.push('Password harus memiliki setidaknya 8 karakter.');
+            }
+            if (!hasCapital) {
+                errorMessages.push('Password harus mengandung setidaknya satu huruf kapital.');
+            }
+            if (!hasSpecial) {
+                errorMessages.push('Password harus mengandung setidaknya satu karakter khusus.');
+            }
+
+            // Display error messages in the passwordErrors list
+            var passwordErrors = document.getElementById('passwordErrors');
+            passwordErrors.innerHTML = ''; // Clear previous errors
+
+            errorMessages.forEach(function(message) {
+                var listItem = document.createElement('li');
+                listItem.textContent = message;
+                passwordErrors.appendChild(listItem);
+            });
+
+            // Prevent form submission if there are errors
+            if (errorMessages.length > 0) {
+                event.preventDefault(); // Prevent form submission
+            }
+        });
+    </script>
 
 </body>
 
