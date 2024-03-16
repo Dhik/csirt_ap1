@@ -7,6 +7,7 @@
             <div class="table-responsive">
                 <div class="d-flex justify-content-between">
                     <button type="button" class="btn btn-success ms-2 addButton" onclick="tampilkanModal('store')">Input Insiden</button>
+                    <button type="button" class="btn btn-success ms-2 addButton" onclick="tampilkanModalSDP('store')">Input Request ke SDP</button>
                 </div>
                 <table class="table">
                     <thead>
@@ -65,6 +66,64 @@
         </div>
     </div>
 </div>
+
+<div class="modal fade" id="tambahKontenModalSDP">
+    <div class="modal-dialog" style="max-width: 700px !important;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Tambah Request</h5>
+            </div>
+            <div class="modal-body">
+                <form action="{{ route('sdp.store') }}" method="post" enctype="multipart/form-data" id="editForm">
+                    @csrf
+                    <input type="hidden" name="formMethod" id="formMethod" value="">
+                    <input type="hidden" name="id" id="id" value="">
+                    <div class="mb-3">
+                        <label for="name">Subject</label>
+                        <input class="form-control" id="subject" name="subject">
+                    </div>
+                    <div class="mb-3">
+                        <label for="name">Description</label>
+                        <input class="form-control" id="description" name="description">
+                    </div>
+                    <div class="mb-3">
+                        <label for="name">ID Requester</label>
+                        <input class="form-control" id="requester_id" name="requester_id">
+                    </div>
+                    <div class="mb-3">
+                        <label for="name">Requester Name</label>
+                        <input class="form-control" id="requester_name" name="requester_name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="name">Detail Impact</label>
+                        <input class="form-control" id="detail_impact" name="detail_impact">
+                    </div>
+                    <div class="mb-3">
+                        <label for="name">Resolution</label>
+                        <input class="form-control" id="resolution" name="resolution">
+                    </div>
+                    <div class="mb-3">
+                        <label for="name">Status</label>
+                        <input class="form-control" id="status" name="status">
+                    </div>
+                    <div class="mb-3">
+                        <label for="name">Technician Name</label>
+                        <input class="form-control" id="technician_name" name="technician_name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="name">ID Technician</label>
+                        <input class="form-control" id="technician_id" name="technician_id">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal" id="tutupModalButton" onclick="tutupModalSDP()">Tutup</button>
+                        <button type="submit" class="btn btn-primary" id="saveButton">Simpan</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 <!-- Modal Tambah Konten -->
 <div class="modal fade" id="tambahKontenModal">
@@ -132,6 +191,10 @@
 @endsection
 @push('scripts')
 <script>
+    function tampilkanModalSDP(action, id = null) {
+            $('#tambahKontenModalSDP').modal('show');
+            $('#editFormSDP')[0].reset();
+    }
     function tampilkanModal(action, id = null) {
         $('#tambahKontenModal').modal('show');
         // Clear the form fields when showing the modal for adding or editing

@@ -122,6 +122,9 @@
                             {{$errorMessage}}
                         </div>
                         @else
+                        <div class="d-flex justify-content-between">
+                            <button type="button" class="btn btn-success ms-2 addButton" onclick="tampilkanModalSDP('store')">Buat Laporan ke SDP</button>
+                        </div>
                         <table class="table">
                             <thead>
                                 <tr>
@@ -146,7 +149,10 @@
                                     <td>{{$request['technician']['name']}}</td>
                                     <td>{{$request['status']['name']}}</td>
                                     <td><button class="btn btn-sm btn-primary ButtonAksi" style="width: 80px;"
-                                            onclick="tampilkanModal('update', {{ $request['id'] }})">Lihat</button></td>
+                                            onclick="tampilkanModal('update', {{ $request['id'] }})">Lihat</button>
+                                        <button class="btn btn-sm btn-success ButtonAksi" style="width: 80px;"
+                                            onclick="tampilkanModal('update', {{ $request['id'] }})">Ubah Status</button>
+                                    </td>
                                 </tr>
                                 @endforeach
                             </tbody>
@@ -157,6 +163,63 @@
             </div>
         </div>
     </div>
+
+    <div class="modal fade" id="tambahKontenModalSDP">
+    <div class="modal-dialog" style="max-width: 700px !important;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Tambah Request</h5>
+            </div>
+            <div class="modal-body">
+                <form action="{{ route('misis.storeOrUpdate') }}" method="post" enctype="multipart/form-data" id="editForm">
+                    @csrf
+                    <input type="hidden" name="formMethod" id="formMethod" value="">
+                    <input type="hidden" name="id" id="id" value="">
+                    <div class="mb-3">
+                        <label for="name">Subject</label>
+                        <p class="form-control" id="requester_name" name="requester_name"></p>
+                    </div>
+                    <div class="mb-3">
+                        <label for="name">Description</label>
+                        <p class="form-control" id="requester_email" name="requester_name"></p>
+                    </div>
+                    <div class="mb-3">
+                        <label for="name">ID Requester</label>
+                        <p class="form-control" id="item_name" name="item_name"></p>
+                    </div>
+                    <div class="mb-3">
+                        <label for="name">Requester Name</label>
+                        <p class="form-control" id="resolved_time" name="resolved_time"></p>
+                    </div>
+                    <div class="mb-3">
+                        <label for="name">Detail Impact</label>
+                        <p class="form-control" id="status_name" name="status_name"></p>
+                    </div>
+                    <div class="mb-3">
+                        <label for="name">Resolution</label>
+                        <p class="form-control" id="template_name" name="template_name"></p>
+                    </div>
+                    <div class="mb-3">
+                        <label for="name">Status</label>
+                        <p class="form-control" id="request_type" name="request_type"></p>
+                    </div>
+                    <div class="mb-3">
+                        <label for="name">Technician Name</label>
+                        <p class="form-control" id="responded_time" name="responded_time"></p>
+                    </div>
+                    <div class="mb-3">
+                        <label for="name">ID Technician</label>
+                        <p class="form-control" id="subject" name="subject"></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal" id="tutupModalButton" onclick="tutupModal()">Tutup</button>
+                        <button type="submit" class="btn btn-primary" id="saveButton">Simpan</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 
     <!-- Modal Tambah Konten -->
 <div class="modal fade" id="tambahKontenModal">
@@ -259,6 +322,10 @@
     <!-- Template Javascript -->
     <script src="{{ asset('/js/main.js') }}"></script>
     <script>
+        function tampilkanModalSDP(action, id = null) {
+            $('#tambahKontenModalSDP').modal('show');
+            $('#editFormSDP')[0].reset();
+        }
         function tampilkanModal(action, id = null) {
             $('#tambahKontenModal').modal('show');
             $('#editForm')[0].reset();

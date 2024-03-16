@@ -31,7 +31,7 @@ class NarahubungController extends Controller
             $response = Http::withToken('1000.df35a3b3b1c3e81026c138fb374044df.18dad7076dc18a436748fde357811345')
                 ->withHeaders([
                     'Authorization' => 'Bearer',
-                    'Authtoken' => '40EC3108-2FF4-4859-9303-45870D212C11',
+                    'Authtoken' => '372E6BC9-C1B3-42B2-A289-33419DFDFE30',
                     'Content-Type' => 'application/x-www-form-urlencoded',
                 ])->get($url);
 
@@ -56,7 +56,7 @@ class NarahubungController extends Controller
             $response = Http::withToken('1000.df35a3b3b1c3e81026c138fb374044df.18dad7076dc18a436748fde357811345')
                 ->withHeaders([
                     'Authorization' => 'Bearer',
-                    'Authtoken' => '40EC3108-2FF4-4859-9303-45870D212C11',
+                    'Authtoken' => '372E6BC9-C1B3-42B2-A289-33419DFDFE30',
                     'Content-Type' => 'application/x-www-form-urlencoded',
                 ])->get($url);
 
@@ -366,6 +366,66 @@ class NarahubungController extends Controller
         }
 
         return redirect()->route('insiden')->with('message', 'Insiden tidak ditemukan');
+    }
+    public function storeSDP(Request $request)
+    {
+        // $eventId = $request->input('event_id');
+        // $formMethod = $request->get('formMethod');
+
+        echo $request;
+
+        // try {
+        //     if ($formMethod == "store") {
+        //         $request->validate([
+        //             'name' => 'required|string',
+        //             'description' => 'required|string',
+        //             'start_date' => 'required|date',
+        //             'end_date' => 'required|date|after:start_date',
+        //             'location' => 'required|string',
+        //         ]);
+
+        //         $eventData = $request->only(['name', 'description', 'start_date', 'end_date', 'location']);
+
+        //         Event::create($eventData);
+
+        //         return redirect()->route('admin.eventManagement')->with('message', 'Event baru berhasil dibuat');
+        //     } elseif ($formMethod == "update") {
+        //         $event = Event::find($eventId);
+
+        //         $request->validate([
+        //             'name' => 'string',
+        //             'description' => 'string',
+        //             'start_date' => 'date',
+        //             'end_date' => 'date|after:start_date',
+        //             'location' => 'string',
+        //         ]);
+        //         $eventData = [
+        //             'name' =>  $request->name,
+        //             'description' =>  $request->description,
+        //             'start_date' => $request->start_date,
+        //             'end_date' => $request->end_date,
+        //             'location' => $request->location,
+        //             'judul' => $request->judul,
+        //             'caption' => $request->caption,
+        //         ];
+
+
+        //         // Periksa apakah ada perubahan sebelum melakukan pembaruan
+        //         if ($event->name != $eventData['name'] || $event->description != $eventData['description'] || 
+        //             $event->start_date != $eventData['start_date'] || $event->end_date != $eventData['end_date'] ||
+        //             $event->location != $eventData['location']) {
+                    
+        //             $event->update($eventData);
+
+        //             return redirect()->route('admin.eventManagement')->with('message', 'Event berhasil diperbarui');
+        //         } else {
+        //             // Tidak ada perubahan yang dilakukan
+        //             return redirect()->route('admin.eventManagement')->with('message', 'Tidak ada perubahan yang dilakukan');
+        //         }
+        //     }
+        // } catch (\Exception $e) {
+        //     return redirect()->route('admin.eventManagement')->with('message', 'Input gagal, isi formulir dengan benar');
+        // }
     }
 
 }

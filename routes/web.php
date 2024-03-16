@@ -201,6 +201,7 @@ Route::get('/insiden',  [NarahubungController::class, 'insiden'])->middleware(['
 Route::get('/insiden/create',  [NarahubungController::class, 'form_create'])->middleware(['auth', 'role:Narahubung'])->name('insiden.create');
 Route::get('/insiden/create/{id}',  [NarahubungController::class, 'form_create_by_id'])->middleware(['auth', 'role:Narahubung'])->name('insiden.create_by_id');
 Route::delete('/insiden/{id}', [NarahubungController::class, 'deleteIncident'])->name('insiden.delete');
+Route::post('/sdp/store', [NarahubungController::class, 'storeSDP'])->name('sdp.store');
 
 Route::post('/insiden/create', [NarahubungController::class, 'store'])->name('insiden.store');
 Route::post('/insiden/create_by_id/{id}', [NarahubungController::class, 'storeByID'])->name('insiden.store_by_id');
