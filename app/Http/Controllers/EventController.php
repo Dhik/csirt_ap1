@@ -8,6 +8,7 @@ use App\Models\Misi;
 use App\Models\Struktur;
 use App\Models\Aduan;
 use App\Models\VA;
+use App\Models\Contact;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Storage;
@@ -26,6 +27,12 @@ class EventController extends Controller
         $events = Event::all();
 
         return view('user.event', ['events' => $events]);
+    }
+    public function hubungiKamiBeranda()
+    {
+        $contacts = Contact::all();
+
+        return view('user.hubungiKami', ['contacts' => $contacts]);
     }
 
     public function show($id)
@@ -517,6 +524,79 @@ class EventController extends Controller
         }
 
         return redirect()->route('admin.layananVAManagement')->with('message', 'Layanan VA tidak ditemukan');
+    }
+
+
+    public function showContact($id)
+    {
+        $event = Contact::find($id);
+
+        if (!$event) {
+            return response()->json(['error' => 'Contact tidak ditemukan'], 404);
+        }
+
+        return response()->json($event);
+    }
+
+    public function storeOrUpdateContact(Request $request)
+    {
+        $eventId = $request->input('contact_id');
+        $formMethod = $request->get('formMethod');
+
+        try {
+            if ($formMethod == "store") {
+                $request->validate([
+                    'lokasi' => 'required|string',
+                    'nomor_hp' => 'required|string',
+                    'maps' => 'required|string',
+                ]);
+
+                $eventData = $request->only(['lokasi', 'nomor_hp', 'maps']);
+
+                Contact::create($eventData);
+
+                return redirect()->route('admin.hubungiKamiManagement')->with('message', 'Layanan VA baru berhasil dibuat');
+            } elseif ($formMethod == "update") {
+                $event = Contact::find($eventId);
+
+                $request->validate([
+                    'lokasi' => 'required|string',
+                    'nomor_hp' => 'required|string',
+                    'maps' => 'required|string',
+                ]);
+                $eventData = [
+                    'lokasi' =>  $request->lokasi,
+                    'nomor_hp' =>  $request->nomor_hp,
+                    'maps' =>  $request->maps,
+                ];
+
+
+                // Periksa apakah ada perubahan sebelum melakukan pembaruan
+                if ($event->lokasi != $eventData['lokasi'] || 
+                $event->nomor_hp != $eventData['nomor_hp'] || 
+                $event->maps != $eventData['maps']) {
+                    
+                    $event->update($eventData);
+                    return redirect()->route('admin.hubungiKamiManagement')->with('message', 'Hubungi Kami berhasil diperbarui');
+                } else {
+                    // Tidak ada perubahan yang dilakukan
+                    return redirect()->route('admin.hubungiKamiManagement')->with('message', 'Tidak ada perubahan yang dilakukan');
+                }
+            }
+        } catch (\Exception $e) {
+            return redirect()->route('admin.hubungiKamiManagement')->with('message', 'Input gagal, isi formulir dengan benar');
+        }
+    }
+
+    public function deleteContact($id)
+    {
+        $content = Contact::find($id);
+        if ($content) {
+            $content->delete();
+            return redirect()->route('admin.hubungiKamiManagement')->with('message', 'Hubungi Kami berhasil dihapus');
+        }
+
+        return redirect()->route('admin.hubungiKamiManagement')->with('message', 'Hubungi Kami tidak ditemukan');
     }
 }
 

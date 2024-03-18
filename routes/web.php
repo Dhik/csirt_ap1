@@ -97,9 +97,7 @@ Route::get('/event', function () {
 
 Route::get('/event', [EventController::class, 'eventBeranda'])->name('user.event');
 
-Route::get('/hubungiKami', function () {
-    return view('user.hubungiKami');
-})->name('user.hubungiKami');
+Route::get('/hubungiKami', [EventController::class, 'hubungiKamiBeranda'])->name('user.hubungiKami');
 
 Route::get('/login', function () {
     return view('user.laporkanInsiden');
@@ -158,9 +156,9 @@ Route::post('/vas/storeOrUpdate', [EventController::class, 'storeOrUpdateVA'])->
 Route::delete('/vas/delete/{id}', [EventController::class, 'deleteVA'])->name('vas.delete');
 Route::get('/vas/show/{id}', [EventController::class, 'showVA'])->name('vas.show');
 
-// Route::post('/vas/storeOrUpdate', [EventController::class, 'storeOrUpdateVA'])->name('vas.storeOrUpdate');
-// Route::delete('/vas/delete/{id}', [EventController::class, 'deleteVA'])->name('vas.delete');
-// Route::get('/vas/show/{id}', [EventController::class, 'showVA'])->name('vas.show');
+Route::post('/contacts/storeOrUpdate', [EventController::class, 'storeOrUpdateContact'])->name('contacts.storeOrUpdate');
+Route::delete('/contacts/delete/{id}', [EventController::class, 'deleteContact'])->name('contacts.delete');
+Route::get('/contacts/show/{id}', [EventController::class, 'showContact'])->name('contacts.show');
 
 Route::post('/admin/carousel/storeOrUpdate', [CarouselController::class, 'storeOrUpdate'])->name('carousel.storeOrUpdate');
 Route::delete('/admin/carousel/delete/{id}', [CarouselController::class, 'delete'])->name('carousel.delete');

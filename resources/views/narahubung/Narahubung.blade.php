@@ -227,6 +227,9 @@
                             <option value="Action">Action</option>
                             <option value="In Progress">In Progress</option>
                             <option value="On Hold">On Hold</option>
+                            <option value="Customer Actions">Customer Actions</option>
+                            <option value="Closed">Closed</option>
+                            <option value="Cancelled">Cancelled</option>
                         </select>
                     </div>
                     <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="tutupModal()">Tutup</button>

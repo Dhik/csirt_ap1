@@ -171,7 +171,7 @@
                 <h5 class="modal-title">Tambah Request</h5>
             </div>
             <div class="modal-body">
-                <form action="{{ route('misis.storeOrUpdate') }}" method="post" enctype="multipart/form-data" id="editForm">
+                <form action="{{ route('sdp.store') }}" method="post" enctype="multipart/form-data" id="editForm">
                     @csrf
                     <input type="hidden" name="formMethod" id="formMethod" value="">
                     <input type="hidden" name="id" id="id" value="">
@@ -201,7 +201,16 @@
                     </div>
                     <div class="mb-3">
                         <label for="name">Status</label>
-                        <p class="form-control" id="request_type" name="request_type"></p>
+                        <select class="form-control" id="request_type" name="request_type" required>
+                            <option value="Open">Open</option>
+                            <option value="Resolve">Resolve</option>
+                            <option value="Action">Action</option>
+                            <option value="In Progress">In Progress</option>
+                            <option value="On Hold">On Hold</option>
+                            <option value="Customer Actions">Customer Actions</option>
+                            <option value="Closed">Closed</option>
+                            <option value="Cancelled">Cancelled</option>
+                        </select>
                     </div>
                     <div class="mb-3">
                         <label for="name">Technician Name</label>

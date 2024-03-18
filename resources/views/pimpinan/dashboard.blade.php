@@ -13,6 +13,7 @@
         <!-- Dashboard Insiden -->
         <div class="container-fluid pt-4 px-4" >
             <div class="row g-4 text-center" >
+            <h4 class="mb-4 text-center">Jumlah Insiden berdasarkan Tipe Insiden</h4>
                 <div class="col-sm-12 col-md-6 col-xl-2">
                     <div class="bg-light rounded d-flex flex-column align-items-center p-4" style="height: 100%;">
                         <i class="fa fa-skull fa-3x text-primary mb-2" style="font-size: 2rem;padding: 2px"></i>
@@ -55,27 +56,60 @@
                         <h6 class="mb-0">{{  $totalPerType['Other'] ?? '0' }}</h6>
                     </div>
                 </div>
-                <div class="col-sm-12 col-md-6 col-xl-4">
+
+                <h4 class="mb-4 text-center">Jumlah Insiden berdasarkan Status Insiden</h4>
+
+                <div class="col-sm-4 col-md-4 col-xl-3">
                     <div class="bg-light rounded d-flex flex-column align-items-center p-4" style="height: 100%;">
                         <i class="fa fa-skull fa-3x text-primary mb-2" style="font-size: 2rem;padding: 2px"></i>
-                        <p class="mb-2">Pending</p>
-                        <h6 class="mb-0">{{  $totalStatus['Pending'] ?? '0' }}</h6>
+                        <p class="mb-2">Open</p>
+                        <h6 class="mb-0">{{  $totalStatus['Open'] ?? '0' }}</h6>
                     </div>
                 </div>
-                <div class="col-sm-12 col-md-6 col-xl-4">
+                <div class="col-sm-4 col-md-4 col-xl-3">
                     <div class="bg-light rounded d-flex flex-column align-items-center p-4" style="height: 100%;">
                         <i class="fa fa-bolt fa-3x text-primary mb-2" style="font-size: 2rem;padding: 2px"></i>
-                        <p class="mb-2">Ditangani</p>
-                        <h6 class="mb-0">{{  $totalStatus['Ditangani'] ?? '0' }}</h6>
+                        <p class="mb-2">In Progress</p>
+                        <h6 class="mb-0">{{  $totalStatus['In Progress'] ?? '0' }}</h6>
                     </div>
                 </div>
-                <div class="col-sm-12 col-md-6 col-xl-4">
+                <div class="col-sm-4 col-md-4 col-xl-3">
                     <div class="bg-light rounded d-flex flex-column align-items-center p-4" style="height: 100%;">
-                        <i class="fa fa-code fa-3x text-primary mb-2" style="font-size: 2rem;padding: 2px"></i>
-                        <p class="mb-2">Close</p>
-                        <h6 class="mb-0">{{  $totalStatus['Close'] ?? '0' }}</h6>
+                        <i class="fa fa-exclamation-triangle fa-3x text-primary mb-2" style="font-size: 2rem;padding: 2px"></i>
+                        <p class="mb-2">On Hold</p>
+                        <h6 class="mb-0">{{  $totalStatus['On Hold'] ?? '0' }}</h6>
                     </div>
                 </div>
+                <div class="col-sm-4 col-md-4 col-xl-3">
+                    <div class="bg-light rounded d-flex flex-column align-items-center p-4" style="height: 100%;">
+                        <i class="fa fa-users fa-3x text-primary mb-2" style="font-size: 2rem;padding: 2px"></i>
+                        <p class="mb-2">Customer Actions</p>
+                        <h6 class="mb-0">{{  $totalStatus['Customer Actions'] ?? '0' }}</h6>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-md-4 col-xl-3">
+                    <div class="bg-light rounded d-flex flex-column align-items-center p-4" style="height: 100%;">
+                        <i class="fa fa-ban fa-3x text-primary mb-2" style="font-size: 2rem;padding: 2px"></i>
+                        <p class="mb-2">Cancelled</p>
+                        <h6 class="mb-0">{{  $totalStatus['Cancelled'] ?? '0' }}</h6>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-md-4 col-xl-3">
+                    <div class="bg-light rounded d-flex flex-column align-items-center p-4" style="height: 100%;">
+                        <i class="fa fa-check-square fa-3x text-primary mb-2" style="font-size: 2rem;padding: 2px"></i>
+                        <p class="mb-2">Resolved</p>
+                        <h6 class="mb-0">{{  $totalStatus['Resolved'] ?? '0' }}</h6>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-md-4 col-xl-3">
+                    <div class="bg-light rounded d-flex flex-column align-items-center p-4" style="height: 100%;">
+                        <i class="fa fa-times-circle fa-3x text-primary mb-2" style="font-size: 2rem;padding: 2px"></i>
+                        <p class="mb-2">Closed</p>
+                        <h6 class="mb-0">{{  $totalStatus['Closed'] ?? '0' }}</h6>
+                    </div>
+                </div>
+
+
             </div>
             <div class="dash">
                 <div class="col-sm-12 col-md-6 col-xl-6" >

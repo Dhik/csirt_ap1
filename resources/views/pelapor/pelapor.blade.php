@@ -5,10 +5,16 @@
         <div class="bg-light rounded h-100 p-4">
             <h2 class="mb-4 text-center">Data Report</h2>
             <div class="table-responsive">
+                
                 <div class="d-flex justify-content-between">
                     <button type="button" class="btn btn-success ms-2 addButton" onclick="tampilkanModal('store')">Input Insiden</button>
                     <button type="button" class="btn btn-success ms-2 addButton" onclick="tampilkanModalSDP('store')">Input Request ke SDP</button>
                 </div>
+                @if(isset($errorMessage))
+                        <div class="alert alert-danger" role="alert">
+                            {{$errorMessage}}
+                        </div>
+                        @else
                 <table class="table">
                     <thead>
                         <tr>
@@ -62,6 +68,7 @@
                     @endforeach
                     </tbody>
                 </table>
+                @endif
             </div>
         </div>
     </div>
@@ -104,7 +111,16 @@
                     </div>
                     <div class="mb-3">
                         <label for="name">Status</label>
-                        <input class="form-control" id="status" name="status">
+                        <select class="form-control" id="request_type" name="request_type" required>
+                            <option value="Open">Open</option>
+                            <option value="Resolve">Resolve</option>
+                            <option value="Action">Action</option>
+                            <option value="In Progress">In Progress</option>
+                            <option value="On Hold">On Hold</option>
+                            <option value="Customer Actions">Customer Actions</option>
+                            <option value="Closed">Closed</option>
+                            <option value="Cancelled">Cancelled</option>
+                        </select>
                     </div>
                     <div class="mb-3">
                         <label for="name">Technician Name</label>

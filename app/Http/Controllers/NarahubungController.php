@@ -7,7 +7,7 @@ use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 use App\Models\Incident;
-
+use Illuminate\Http\Client\RequestException;
 
 class NarahubungController extends Controller
 {
@@ -367,65 +367,74 @@ class NarahubungController extends Controller
 
         return redirect()->route('insiden')->with('message', 'Insiden tidak ditemukan');
     }
+    
+
     public function storeSDP(Request $request)
     {
-        // $eventId = $request->input('event_id');
-        // $formMethod = $request->get('formMethod');
+        try {
+            $requestData = $request->only([
+                'subject',
+                'description',
+                'requester_id',
+                'requester_name',
+                'detail_impact',
+                'resolution',
+                'request_type',
+                'technician_name',
+                'technician_id',
+            ]);
 
-        echo $request;
+            // Constructing data in the format expected by the API
+            $requestDataFormatted = [
+                'request' => [
+                    'subject' => $requestData['subject'],
+                    'description' => $requestData['description'],
+                    'requester' => [
+                        'id' => $requestData['requester_id'],
+                        'name' => $requestData['requester_name'],
+                    ],
+                    'impact_details' => $requestData['detail_impact'],
+                    'resolution' => [
+                        'content' => $requestData['resolution'],
+                    ],
+                    'status' => [
+                        'name' => $requestData['request_type'],
+                    ],
+                    'technician' => [
+                        'name' => $requestData['technician_name'],
+                        'id' => $requestData['technician_id'],
+                    ],
+                ],
+            ];
 
-        // try {
-        //     if ($formMethod == "store") {
-        //         $request->validate([
-        //             'name' => 'required|string',
-        //             'description' => 'required|string',
-        //             'start_date' => 'required|date',
-        //             'end_date' => 'required|date|after:start_date',
-        //             'location' => 'required|string',
-        //         ]);
-
-        //         $eventData = $request->only(['name', 'description', 'start_date', 'end_date', 'location']);
-
-        //         Event::create($eventData);
-
-        //         return redirect()->route('admin.eventManagement')->with('message', 'Event baru berhasil dibuat');
-        //     } elseif ($formMethod == "update") {
-        //         $event = Event::find($eventId);
-
-        //         $request->validate([
-        //             'name' => 'string',
-        //             'description' => 'string',
-        //             'start_date' => 'date',
-        //             'end_date' => 'date|after:start_date',
-        //             'location' => 'string',
-        //         ]);
-        //         $eventData = [
-        //             'name' =>  $request->name,
-        //             'description' =>  $request->description,
-        //             'start_date' => $request->start_date,
-        //             'end_date' => $request->end_date,
-        //             'location' => $request->location,
-        //             'judul' => $request->judul,
-        //             'caption' => $request->caption,
-        //         ];
-
-
-        //         // Periksa apakah ada perubahan sebelum melakukan pembaruan
-        //         if ($event->name != $eventData['name'] || $event->description != $eventData['description'] || 
-        //             $event->start_date != $eventData['start_date'] || $event->end_date != $eventData['end_date'] ||
-        //             $event->location != $eventData['location']) {
-                    
-        //             $event->update($eventData);
-
-        //             return redirect()->route('admin.eventManagement')->with('message', 'Event berhasil diperbarui');
-        //         } else {
-        //             // Tidak ada perubahan yang dilakukan
-        //             return redirect()->route('admin.eventManagement')->with('message', 'Tidak ada perubahan yang dilakukan');
-        //         }
-        //     }
-        // } catch (\Exception $e) {
-        //     return redirect()->route('admin.eventManagement')->with('message', 'Input gagal, isi formulir dengan benar');
-        // }
+            // Make a POST request to the API
+            $response = Http::withToken('1000.df35a3b3b1c3e81026c138fb374044df.18dad7076dc18a436748fde357811345')
+                ->withHeaders([
+                    'Authorization' => 'Bearer',
+                    'Authtoken' => '372E6BC9-C1B3-42B2-A289-33419DFDFE30',
+                    'Content-Type' => 'application/form-data',
+                ])
+                ->timeout(100)
+                ->post('https://sdp.ap1.co.id/api/v3/requests', [
+                    'input_data' => json_encode($requestDataFormatted),
+                ]);
+                
+            echo $response;
+            // // Check if the request was successful
+            // if ($response->successful()) {
+            //     // Request was successful
+            //     return redirect()->route('pelapor.reportPelapor')->with('message', 'Laporan berhasil ditambahkan');
+            // } else {
+            //     // Request failed
+            //     echo json_encode($requestDataFormatted);
+            //     echo $response->status();
+            //     // return redirect()->route('pelapor.reportPelapor')->with('message', 'Input gagal, Periksa kembali inputan ');
+            // }
+        } catch (Exception $e) {
+            // Request Exception occurred
+            echo json_encode($requestDataFormatted);
+            echo $e->getMessage();
+        }
     }
 
 }

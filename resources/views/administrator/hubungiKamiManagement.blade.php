@@ -1,15 +1,17 @@
 @extends('layout.AdminLayout')
 @section('content')
-@section('title', 'Admin | Layanan VA Management')
+@section('title', 'Admin | Hubungi Kami Management')
 
 <div class="container-fluid pt-4 px-4">
     <div class="col-10 tableContent g-4">
         <div class="bg-light rounded h-100 p-4">
             <h2 class="mb-4 text-center">Pengaturan Hubungi Kami</h2>
             <div class="table-responsive">
+                @if (count($contacts) == 0)
                 <div class="d-flex justify-content-between">
                     <button type="button" class="btn btn-success ms-2 addButton" onclick="tampilkanModal('store')">Buat Contact</button>
                 </div>
+                @endif
                 <table class="table">
                     <thead>
                         <tr>
@@ -17,21 +19,24 @@
                             <th scope="col"><h6>Lokasi</h6></th>
                             <th scope="col"><h6>Seluler</h6></th>
                             <th scope="col"><h6>Link Maps</h6></th>
+                            <th scope="col"><h6>Aksi</h6></th>
                         </tr>
                     </thead>
                     <tbody>
                         @foreach ($contacts as $contact)
                         <tr>
                             <th scope="row"><p>{{ $loop->iteration }}</p></th>
-                            <td><p>{{ $contact->informasi_va }}</p></td>
-                            <!-- <td>
-                                <button class="btn btn-sm btn-primary ButtonAksi" style="width: 60px;" onclick="tampilkanModal( 'update', {{ $va->id }})"><p>Edit</p></button>
-                                <form action="{{ route('vas.delete', ['id' => $va->id]) }}" method="post" onsubmit="return confirm('Are you sure you want to delete this va?')">
+                            <td><p>{{ $contact->lokasi }}</p></td>
+                            <td><p>{{ $contact->nomor_hp }}</p></td>
+                            <td><p>{{ $contact->maps }}</p></td>
+                            <td>
+                                <button class="btn btn-sm btn-primary ButtonAksi" style="width: 60px;" onclick="tampilkanModal( 'update', {{ $contact->id }})"><p>Edit</p></button>
+                                <form action="{{ route('contacts.delete', ['id' => $contact->id]) }}" method="post" onsubmit="return confirm('Are you sure you want to delete this Contact?')">
                                     @csrf
                                     @method('delete')
                                     <button type="submit" style="width: 60px;" class="btn btn-sm btn-danger ButtonAksi"><p>Hapus</p></button>
                                 </form>
-                            </td> -->
+                            </td>
                         </tr>
                         @endforeach
                     </tbody>
@@ -50,10 +55,10 @@
                 <h5 class="modal-title">Hubungi Kami</h5>
             </div>
             <div class="modal-body">
-                <form action="{{ route('vas.storeOrUpdate') }}" method="post" enctype="multipart/form-data" id="editForm">
+                <form action="{{ route('contacts.storeOrUpdate') }}" method="post" enctype="multipart/form-data" id="editForm">
                     @csrf
                     <input type="hidden" name="formMethod" id="formMethod" value="">
-                    <input type="hidden" name="va_id" id="va_id" value="">
+                    <input type="hidden" name="contact_id" id="contact_id" value="">
                     <div class="mb-3">
                         <label for="name">Lokasi</label>
                         <input type="text" class="form-control" id="lokasi" name="lokasi">
@@ -88,19 +93,21 @@
         // Set the form method and action based on the provided action
         if (action === 'store') {
             $('#editForm').attr('method', 'post');
-            $('#editForm').attr('action', '{{ route("vas.storeOrUpdate") }}');
+            $('#editForm').attr('action', '{{ route("contacts.storeOrUpdate") }}');
             $('#formMethod').val('store');
         } else if (action === 'update' && id) {
             // Use AJAX to fetch the existing data for the gallery
             $.ajax({
-                url: "{{ url('/vas/show/') }}" + '/' + id,
+                url: "{{ url('/contacts/show/') }}" + '/' + id,
                 type: 'GET',
                 success: function (data) {
                     // Fill the form fields with the existing data
-                    $('#va_id').val(data.id);
-                    $('#informasi_va').val(data.informasi_va);
+                    $('#contact_id').val(data.id);
+                    $('#lokasi').val(data.lokasi);
+                    $('#nomor_hp').val(data.nomor_hp);
+                    $('#maps').val(data.maps);
                     // Update the form method to the update route
-                    $('#editForm').attr('action', '{{ route("vas.storeOrUpdate") }}');
+                    $('#editForm').attr('action', '{{ route("contacts.storeOrUpdate") }}');
                     // Update the form method to 'update'
                     $('#formMethod').val('update');
                 },
