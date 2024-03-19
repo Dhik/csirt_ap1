@@ -12,14 +12,15 @@ class ContentController extends Controller
 {
     public function getContentsBeranda()
     {
-        $content = Content::latest()->get();
-        $latestContent = Content::latest()->first(); 
-        $galleries = Gallery::all();
-        $carousels = Carousel::all();
-        $screenWidth = request('screenWidth') ?? 0;
-        // dd($screenWidth);
+        // $content = Content::latest()->get();
+        // $latestContent = Content::latest()->first(); 
+        // $galleries = Gallery::all();
+        // $carousels = Carousel::all();
+        // $screenWidth = request('screenWidth') ?? 0;
+        // // dd($screenWidth);
 
-        return view('user.beranda', compact('content', 'galleries', 'carousels', 'latestContent','screenWidth'));
+        // return view('user.beranda', compact('content', 'galleries', 'carousels', 'latestContent','screenWidth'));
+        return view('user.beranda2');
     
     }
 
