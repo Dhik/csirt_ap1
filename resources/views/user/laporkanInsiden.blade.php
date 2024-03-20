@@ -78,7 +78,7 @@
             <div class="right-box">
                 <!-- Tambahkan elemen untuk gambar -->
                 <div class="col">
-                    <h2 style="color: #0072B9;">SISTEM LAPORAN INSIDEN</h2>
+                    <h2 style="color: #0072B9;">SISTEM PELAPORAN INSIDEN</h2>
                     <img src="img/loginGambar.png" alt="Login Image" class="img-fluid"
                         style="max-height: 70%; max-width: 70%; display: block;
   margin-left: auto;

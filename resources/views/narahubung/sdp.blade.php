@@ -140,7 +140,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                @foreach($requests as $request)
+                                    @foreach($requests as $request)
     @if(isset($request['technician']['name']) && $request['technician']['name'] == 'CSIRT AP1')
         <tr>
             <td>{{ isset($request['id']) ? $request['id'] : '' }}</td>
@@ -278,16 +278,8 @@
                         <p class="form-control" id="request_type" name="request_type"></p>
                     </div>
                     <div class="mb-3">
-                        <label for="name">Responded Time</label>
-                        <p class="form-control" id="responded_time" name="responded_time"></p>
-                    </div>
-                    <div class="mb-3">
                         <label for="name">Subject</label>
                         <p class="form-control" id="subject" name="subject"></p>
-                    </div>
-                    <div class="mb-3">
-                        <label for="name">Mode</label>
-                        <p class="form-control" id="mode" name="mode"></p>
                     </div>
                     <div class="mb-3">
                         <label for="name">Email to</label>
@@ -362,9 +354,7 @@
                     $('#status_name').text(data.status.name);
                     $('#template_name').text(data.template.name);
                     $('#request_type').text(data.request_type.name);
-                    $('#responded_time').text(data.responded_time.display_value);
                     $('#subject').text(data.subject);
-                    $('#mode').text(data.mode.name);
                     $('#email_to').text(data.email_to);
                     $('#description').html(data.description);
                     $('#technician_name').text(data.technician.name);
@@ -372,6 +362,7 @@
                     $('#technician_dept_name_site').text(data.technician.department.site.name);
                     $('#technician_dept_name').text(data.technician.department.name);
                     $('#category_name').text(data.technician.name);
+
                     // Update the form method to the update route
                     // $('#editForm').attr('action', '{{ route("misis.storeOrUpdate") }}');
                     // Update the form method to 'update'
