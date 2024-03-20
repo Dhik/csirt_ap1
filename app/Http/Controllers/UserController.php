@@ -66,9 +66,8 @@ class UserController extends Controller
             $request->validate([
                 'role_user' => 'required',
                 'nama_user' => 'required',
-                'email' => 'required' . $request->input('user_id'),
+                'email' => 'required',
                 'status' => 'required',
-                'email_user' => 'required',
             ]);
 
             $userId = $request->input('user_id');
@@ -88,12 +87,8 @@ class UserController extends Controller
                 'email_user' => $request->email_user,
             ];
             
-
-            
-
-            
             if ($user->role_user!= $userData['role_user'] || $user->nama_user != $userData['nama_user'] || 
-                $user->email != $userData['email'] || $user->status != $userData['status'] ) {
+                $user->email != $userData['email'] || $user->status != $userData['status'] || $user->status != $userData['email_user']) {
                 // Update user data only if a new password is provided
                 if ($request->filled('password')) {
                     $userData['password'] = Hash::make($request->password);
@@ -103,7 +98,8 @@ class UserController extends Controller
                 return redirect()->route('superuser')->with('success', 'User updated successfully');
             } else {
                 // Tidak ada perubahan yang dilakukan
-                return redirect()->route('superuser')->with('message', 'No changes made to the user');            }
+                return redirect()->route('superuser')->with('message', 'No changes made to the user');            
+            }
         }
     } catch (\Illuminate\Validation\ValidationException $e) {
         $errors = $e->errors();

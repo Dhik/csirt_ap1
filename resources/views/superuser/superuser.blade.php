@@ -133,7 +133,8 @@
                         $('#role_user').val(data.role_user);
                         $('#nama_user').val(data.nama_user);
                         $('#email').val(data.email);
-                        $('#status').val(data.status); // Set status from fetched data
+                        $('#status').val(data.status);
+                        $('#email_user').val(data.email_user); // Set status from fetched data
 
                         // Set the user_id for updating
                         $('#user_id').val(id);
