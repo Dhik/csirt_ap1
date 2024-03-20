@@ -140,21 +140,23 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach($requests as $request)
-                                        <tr>
-                                        <td>{{ isset($request['id']) ? $request['id'] : '' }}</td>
-        <td>{{ isset($request['requester']['name']) ? $request['requester']['name'] : '' }}</td>
-        <td>{!! isset($request['short_description']) ? $request['short_description'] : '' !!}</td>
-        <td>{{ isset($request['created_time']['display_value']) ? $request['created_time']['display_value'] : '' }}</td>
-        <td>{{ isset($request['subject']) ? $request['subject'] : '' }}</td>
-        <td>{{ isset($request['technician']['name']) ? $request['technician']['name'] : '' }}</td>
-        <td>{{ isset($request['status']['name']) ? $request['status']['name'] : '' }}</td>
-        <td>
-            <button class="btn btn-sm btn-primary ButtonAksi" style="width: 80px;" onclick="tampilkanModal('update', {{ isset($request['id']) ? $request['id'] : '' }})">Lihat</button>
-            <button class="btn btn-sm btn-success ButtonAksi" style="width: 80px;" onclick="tampilkanModal('update', {{ isset($request['id']) ? $request['id'] : '' }})">Ubah Status</button>
-        </td>
-                                        </tr>
-                                    @endforeach
+                                @foreach($requests as $request)
+    @if(isset($request['technician']['name']) && $request['technician']['name'] == 'CSIRT AP1')
+        <tr>
+            <td>{{ isset($request['id']) ? $request['id'] : '' }}</td>
+            <td>{{ isset($request['requester']['name']) ? $request['requester']['name'] : '' }}</td>
+            <td>{!! isset($request['short_description']) ? $request['short_description'] : '' !!}</td>
+            <td>{{ isset($request['created_time']['display_value']) ? $request['created_time']['display_value'] : '' }}</td>
+            <td>{{ isset($request['subject']) ? $request['subject'] : '' }}</td>
+            <td>{{ isset($request['technician']['name']) ? $request['technician']['name'] : '' }}</td>
+            <td>{{ isset($request['status']['name']) ? $request['status']['name'] : '' }}</td>
+            <td>
+                <button class="btn btn-sm btn-primary ButtonAksi" style="width: 80px;" onclick="tampilkanModal('update', {{ isset($request['id']) ? $request['id'] : '' }})">Lihat</button>
+                <button class="btn btn-sm btn-success ButtonAksi" style="width: 80px;" onclick="tampilkanModal('update', {{ isset($request['id']) ? $request['id'] : '' }})">Ubah Status</button>
+            </td>
+        </tr>
+    @endif
+@endforeach
                                 </tbody>
                             </table>
                         @else

@@ -57,9 +57,6 @@
         </a>
         <div class="login-box">
             <div class="left-box">
-                <div class="title-box">
-                    <h2 style="margin: 0;padding: 0">LOGIN</h2>
-                </div>
                 <div class="login-form">
                     @if(session('error'))
                     <div class="alert alert-danger">
@@ -81,7 +78,7 @@
             <div class="right-box">
                 <!-- Tambahkan elemen untuk gambar -->
                 <div class="col">
-                    <h2 style="color: #0072B9;">SISTEM LAPORKAN INSIDEN</h2>
+                    <h2 style="color: #0072B9;">SISTEM LAPORAN INSIDEN</h2>
                     <img src="img/loginGambar.png" alt="Login Image" class="img-fluid"
                         style="max-height: 70%; max-width: 70%; display: block;
   margin-left: auto;
@@ -115,13 +112,13 @@
 
             // Check for password criteria and build error messages
             if (!hasLength) {
-                errorMessages.push('Password harus memiliki setidaknya 8 karakter.');
+                errorMessages.push('Password harus memiliki minimal 8 karakter.');
             }
             if (!hasCapital) {
-                errorMessages.push('Password harus mengandung setidaknya satu huruf kapital.');
+                errorMessages.push('Password harus mengandung minimal satu huruf kapital.');
             }
             if (!hasSpecial) {
-                errorMessages.push('Password harus mengandung setidaknya satu karakter khusus.');
+                errorMessages.push('Password harus mengandung minimal satu karakter khusus.');
             }
 
             // Display error messages in the passwordErrors list
