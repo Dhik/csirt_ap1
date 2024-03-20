@@ -71,7 +71,7 @@
                         <input type="text" name="email" id="email" class="form-control" placeholder="NIP" required style="padding: 10px; text-align: center;">
                         <input type="password" name="password" id="password" class="form-control" placeholder="Password"
                             required style="padding: 10px;">
-                        <ul id="passwordErrors" class="list-unstyled small text-danger"></ul>
+                        <!-- <ul id="passwordErrors" class="list-unstyled small text-danger"></ul> -->
                         <p style="font-size: 12px; color:#323232;padding:0; margin: 0">Jika lupa password hubungi admin
                             di admin@ap1.co.id.</p>
                         <button type="submit" style="padding: 10px;"><b>Login</b></button>

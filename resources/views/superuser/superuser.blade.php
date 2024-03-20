@@ -14,6 +14,7 @@
                             <th scope="col">#</th>
                             <th scope="col">Role User</th>
                             <th scope="col">Nama User</th>
+                            <th scope="col">NIP</th>
                             <th scope="col">Email User</th>
                             <th scope="col">Status</th>
                             <th scope="col">Aksi</th>
@@ -26,6 +27,7 @@
                             <td>{{ $user->role_user }}</td>
                             <td>{{ $user->nama_user }}</td>
                             <td>{{ $user->email }}</td>
+                            <td>{{ $user->email_user }}</td>
                             <td>{{ $user->status }}</td>
                             <td>
                                 <button class="btn btn-sm btn-primary ButtonAksi" style="width: 80px;" onclick="tampilkanModal('update', {{ $user->id  }})">Edit</button>
@@ -73,6 +75,10 @@
                     <div class="mb-3">
                         <label for="email">NIP</label>
                         <input type="text" class="form-control" id="email" name="email">
+                    </div>
+                    <div class="mb-3">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email_user" name="email_user">
                     </div>
                     <div class="mb-3">
                         <label for="password">Password</label>

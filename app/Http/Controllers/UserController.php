@@ -45,6 +45,7 @@ class UserController extends Controller
                 'email' => 'required',
                 'password' => 'required',
                 'status' => 'required',
+                'email_user' => 'required',
             ]);
 
             $userData = [
@@ -53,6 +54,7 @@ class UserController extends Controller
                 'email' => $request->email,
                 'status' => $request->status,
                 'password' => Hash::make($request->password),
+                'email_user' => $request->email_user,
             ];
 
             // Store new user
@@ -66,6 +68,7 @@ class UserController extends Controller
                 'nama_user' => 'required',
                 'email' => 'required' . $request->input('user_id'),
                 'status' => 'required',
+                'email_user' => 'required',
             ]);
 
             $userId = $request->input('user_id');
@@ -82,6 +85,7 @@ class UserController extends Controller
                 'nama_user' => $request->nama_user,
                 'email' => $request->email,
                 'status' => $request->status,
+                'email_user' => $request->email_user,
             ];
             
 
