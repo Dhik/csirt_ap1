@@ -122,41 +122,46 @@
                             {{$errorMessage}}
                         </div>
                         @else
-                        <div class="d-flex justify-content-between">
-                            <button type="button" class="btn btn-success ms-2 addButton" onclick="tampilkanModalSDP('store')">Buat Laporan ke SDP</button>
-                        </div>
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th scope="col">No Ticket</th>
-                                    <th scope="col">Requester Name</th>
-                                    <th scope="col">Short Description</th>
-                                    <th scope="col">Created Time</th>
-                                    <th scope="col">Subject</th>
-                                    <th scope="col">Technician Name</th>
-                                    <th scope="col">Status</th>
-                                    <th scope="col">Detail</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach($requests as $request)
-                                <tr>
-                                    <td>{{$request['id']}}</td>
-                                    <td>{{$request['requester']['name']}}</td>
-                                    <td>{!! $request['short_description'] !!}</td>
-                                    <td>{{$request['created_time']['display_value']}}</td>
-                                    <td>{{$request['subject']}}</td>
-                                    <td>{{$request['technician']['name']}}</td>
-                                    <td>{{$request['status']['name']}}</td>
-                                    <td><button class="btn btn-sm btn-primary ButtonAksi" style="width: 80px;"
-                                            onclick="tampilkanModal('update', {{ $request['id'] }})">Lihat</button>
-                                        <button class="btn btn-sm btn-success ButtonAksi" style="width: 80px;"
-                                            onclick="tampilkanModal('update', {{ $request['id'] }})">Ubah Status</button>
-                                    </td>
-                                </tr>
-                                @endforeach
-                            </tbody>
-                        </table>
+                        @if(isset($requests) && is_array($requests) && count($requests) > 0)
+                            <div class="d-flex justify-content-between">
+                                <button type="button" class="btn btn-success ms-2 addButton" onclick="tampilkanModalSDP('store')">Buat Laporan ke SDP</button>
+                            </div>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">No Ticket</th>
+                                        <th scope="col">Requester Name</th>
+                                        <th scope="col">Short Description</th>
+                                        <th scope="col">Created Time</th>
+                                        <th scope="col">Subject</th>
+                                        <th scope="col">Technician Name</th>
+                                        <th scope="col">Status</th>
+                                        <th scope="col">Detail</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach($requests as $request)
+                                        <tr>
+                                        <td>{{ isset($request['id']) ? $request['id'] : '' }}</td>
+        <td>{{ isset($request['requester']['name']) ? $request['requester']['name'] : '' }}</td>
+        <td>{!! isset($request['short_description']) ? $request['short_description'] : '' !!}</td>
+        <td>{{ isset($request['created_time']['display_value']) ? $request['created_time']['display_value'] : '' }}</td>
+        <td>{{ isset($request['subject']) ? $request['subject'] : '' }}</td>
+        <td>{{ isset($request['technician']['name']) ? $request['technician']['name'] : '' }}</td>
+        <td>{{ isset($request['status']['name']) ? $request['status']['name'] : '' }}</td>
+        <td>
+            <button class="btn btn-sm btn-primary ButtonAksi" style="width: 80px;" onclick="tampilkanModal('update', {{ isset($request['id']) ? $request['id'] : '' }})">Lihat</button>
+            <button class="btn btn-sm btn-success ButtonAksi" style="width: 80px;" onclick="tampilkanModal('update', {{ isset($request['id']) ? $request['id'] : '' }})">Ubah Status</button>
+        </td>
+                                        </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        @else
+                            <div class="alert alert-danger" role="alert">
+                                No requests found
+                            </div>
+                        @endif
                         @endif
                     </div>
                 </div>
