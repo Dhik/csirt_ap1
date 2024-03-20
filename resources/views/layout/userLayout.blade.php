@@ -195,13 +195,13 @@
         <div class="infoFoot">
             <img src="/img/write_foot.svg" alt="Write Footer">
             <div class="hotlineFooter">
-                <p style="margin: 0; padding: 0">Informasi, Saran dan Keluhan:  </p>
-                <p style="margin: 0; padding: 0">cc172@ap1.co.id</p>
+                <p style="margin: 0; padding: 0">Email:  </p>
+                <p style="margin: 0; padding: 0">csirt@ap1.co.id</p>
             </div>
         </div>
     </div>
     <div class="lowerFooter" >
-        <p>© Copyright 2023 PT Angkasa Pura I</p>
+        <p>© Copyright 2024 PT Angkasa Pura I</p>
     </div>
 </div>
 <!-- Footer End -->

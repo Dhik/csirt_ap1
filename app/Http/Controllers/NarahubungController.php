@@ -387,7 +387,7 @@ class NarahubungController extends Controller
             // Constructing data in the format expected by the API
             $requestDataFormatted = [
                 'request' => [
-                    'subject' => $requestData['subject'],
+                    'subject' => "csirt_ap1".$requestData['subject'],
                     'description' => $requestData['description'],
                     'requester' => [
                         'id' => $requestData['requester_id'],
@@ -416,9 +416,10 @@ class NarahubungController extends Controller
                 ])
                 ->timeout(100)
                 ->post('https://sdp.ap1.co.id/api/v3/requests', [
-                    'input_data' => json_encode($requestDataFormatted),
+                    'input_data' => serialize(json_encode($requestDataFormatted)),
                 ]);
-                
+            echo gettype(serialize(json_encode($requestDataFormatted)));    
+            echo json_encode($requestDataFormatted);
             echo $response;
             // // Check if the request was successful
             // if ($response->successful()) {
