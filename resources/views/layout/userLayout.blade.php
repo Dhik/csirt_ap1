@@ -32,7 +32,43 @@
 
     {{-- css global ours --}}
     <link rel="stylesheet" href="{{ asset('css/user.css') }}">
-    
+    <style>
+        /* Custom CSS for the contact icon */
+        .contact-icon {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 60px; /* adjust size as needed */
+            height: 60px; /* adjust size as needed */
+            border-radius: 50%;
+            background-color: #007bff; /* adjust color as needed */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* add shadow for depth */
+            z-index: 9999; /* make sure it's above other content */
+            animation: zoomInOut 2s ease-in-out infinite; /* Animation */
+        }
+
+        .contact-icon img {
+            width: 80%; /* adjust icon size */
+            height: auto; /* maintain aspect ratio */
+            filter: invert(1); /* invert icon color for better contrast */
+        }
+
+        /* Animation keyframes */
+        @keyframes zoomInOut {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -82,15 +118,18 @@
             <li class="nav-item">
                 <a class="nav-link fiturMenu fitur{{ $hubungiKamiActive ?? '' }}" href="{{ route('user.hubungiKami')}}"><p>HUBUNGI KAMI</p></a>
             </li>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
                 <a class="nav-link fiturMenu fitur{{ $laporkanInsidenActive ?? '' }}" href="{{ route('user.laporkanInsiden')}}"><p>LAPORKAN INSIDEN</p></a>
-            </li>
+            </li> -->
         </ul>
     </div>
 </nav>
 
 <!-- Navbar End -->
-
+<!-- Contact Icon -->
+    <a href="{{ route('user.laporkanInsiden')}}" class="contact-icon">
+        <img src="{{ asset('img/contact-icon.png') }}" alt="Contact">
+    </a>
 
 {{-- content --}}
 <div class="bg">

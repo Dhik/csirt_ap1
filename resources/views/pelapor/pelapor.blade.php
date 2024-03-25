@@ -122,14 +122,6 @@
                             <option value="Cancelled">Cancelled</option>
                         </select>
                     </div>
-                    <div class="mb-3">
-                        <label for="name">Technician Name</label>
-                        <input class="form-control" id="technician_name" name="technician_name">
-                    </div>
-                    <div class="mb-3">
-                        <label for="name">ID Technician</label>
-                        <input class="form-control" id="technician_id" name="technician_id">
-                    </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal" id="tutupModalButton" onclick="tutupModalSDP()">Tutup</button>
                         <button type="submit" class="btn btn-primary" id="saveButton">Simpan</button>

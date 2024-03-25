@@ -44,6 +44,7 @@
         justify-content: center;
         font-family: 'Open Sans', sans-serif !important;
         box-sizing: border-box;
+        background-color: rgba(0, 0, 0, 0.3);
     }
     </style>
 
@@ -70,7 +71,7 @@
                             required style="padding: 10px;">
                         <!-- <ul id="passwordErrors" class="list-unstyled small text-danger"></ul> -->
                         <p style="font-size: 12px; color:#323232;padding:0; margin: 0">Jika lupa password hubungi admin
-                            di admin@ap1.co.id.</p>
+                            di csirt@ap1.co.id.</p>
                         <button type="submit" style="padding: 10px;"><b>Login</b></button>
                     </form>
                 </div>

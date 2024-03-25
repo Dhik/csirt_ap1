@@ -400,26 +400,19 @@ class NarahubungController extends Controller
                     'status' => [
                         'name' => $requestData['request_type'],
                     ],
-                    'technician' => [
-                        'name' => $requestData['technician_name'],
-                        'id' => $requestData['technician_id'],
-                    ],
                 ],
             ];
 
             // Make a POST request to the API
             $response = Http::withToken('1000.df35a3b3b1c3e81026c138fb374044df.18dad7076dc18a436748fde357811345')
                 ->withHeaders([
-                    'Authorization' => 'Bearer',
-                    'Authtoken' => '372E6BC9-C1B3-42B2-A289-33419DFDFE30',
+                    'Authorization' => 'Bearer 372E6BC9-C1B3-42B2-A289-33419DFDFE30', // Include the token value here
                     'Content-Type' => 'application/form-data',
                 ])
-                ->timeout(100)
                 ->post('https://sdp.ap1.co.id/api/v3/requests', [
-                    'input_data' => serialize(json_encode($requestDataFormatted)),
+                    'input_data' => `{"request":{"subject":"csirt_ap1test","description":"test","requester":{"id":"4","name":"administrator"},"impact_details":"test","resolution":{"content":"test"},"status":{"name":"Open"}}}`,
                 ]);
-            echo gettype(serialize(json_encode($requestDataFormatted)));    
-            echo json_encode($requestDataFormatted);
+            echo json_encode($requestDataFormatted);    
             echo $response;
             // // Check if the request was successful
             // if ($response->successful()) {
@@ -433,7 +426,7 @@ class NarahubungController extends Controller
             // }
         } catch (Exception $e) {
             // Request Exception occurred
-            echo json_encode($requestDataFormatted);
+            // echo json_encode($requestDataFormatted);
             echo $e->getMessage();
         }
     }
