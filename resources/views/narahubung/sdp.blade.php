@@ -141,8 +141,7 @@
                                 </thead>
                                 <tbody>
                                     @foreach($requests as $request)
-    @if(isset($request['technician']['name']) && $request['technician']['name'] == 'CSIRT AP1')
-        <tr>
+                                    <tr>
             <td>{{ isset($request['id']) ? $request['id'] : '' }}</td>
             <td>{{ isset($request['requester']['name']) ? $request['requester']['name'] : '' }}</td>
             <td>{!! isset($request['short_description']) ? $request['short_description'] : '' !!}</td>
@@ -155,7 +154,6 @@
                 <button class="btn btn-sm btn-success ButtonAksi" style="width: 80px;" onclick="tampilkanModal('update', {{ isset($request['id']) ? $request['id'] : '' }})">Ubah Status</button>
             </td>
         </tr>
-    @endif
 @endforeach
                                 </tbody>
                             </table>
@@ -258,24 +256,12 @@
                         <p class="form-control" id="requester_email" name="requester_name"></p>
                     </div>
                     <div class="mb-3">
-                        <label for="name">Item</label>
-                        <p class="form-control" id="item_name" name="item_name"></p>
-                    </div>
-                    <div class="mb-3">
-                        <label for="name">Resolved Time</label>
-                        <p class="form-control" id="resolved_time" name="resolved_time"></p>
-                    </div>
-                    <div class="mb-3">
                         <label for="name">Status</label>
                         <p class="form-control" id="status_name" name="status_name"></p>
                     </div>
                     <div class="mb-3">
                         <label for="name">Template</label>
                         <p class="form-control" id="template_name" name="template_name"></p>
-                    </div>
-                    <div class="mb-3">
-                        <label for="name">Request Type</label>
-                        <p class="form-control" id="request_type" name="request_type"></p>
                     </div>
                     <div class="mb-3">
                         <label for="name">Subject</label>
@@ -348,12 +334,10 @@
                     // Fill the form fields with the existing data
                     $('#id').val(data.id);
                     $('#requester_name').text(data.requester.name);
+                    console.log("Data received:", data.requester.name);
                     $('#requester_email').text(data.requester.email_id);
-                    $('#item_name').text(data.item.name);
-                    $('#resolved_time').text(data.resolved_time.display_value);
                     $('#status_name').text(data.status.name);
                     $('#template_name').text(data.template.name);
-                    $('#request_type').text(data.request_type.name);
                     $('#subject').text(data.subject);
                     $('#email_to').text(data.email_to);
                     $('#description').html(data.description);

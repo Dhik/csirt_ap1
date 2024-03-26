@@ -409,9 +409,7 @@ class NarahubungController extends Controller
                     'Authorization' => 'Bearer 372E6BC9-C1B3-42B2-A289-33419DFDFE30', // Include the token value here
                     'Content-Type' => 'application/form-data',
                 ])
-                ->post('https://sdp.ap1.co.id/api/v3/requests', [
-                    'input_data' => `{"request":{"subject":"csirt_ap1test","description":"test","requester":{"id":"4","name":"administrator"},"impact_details":"test","resolution":{"content":"test"},"status":{"name":"Open"}}}`,
-                ]);
+                ->post('https://sdp.ap1.co.id/api/v3/requests?input_data={"request":{"subject":"csirt_ap1test","description":"test","requester":{"id":"4","name":"administrator"},"impact_details":"test","resolution":{"content":"test"},"status":{"name":"Open"}}}');
             echo json_encode($requestDataFormatted);    
             echo $response;
             // // Check if the request was successful
